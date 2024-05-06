@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="CafeApp.CafeMainForm">
+  <grid id="27dc6" binding="panel1" default-binding="true" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+    <constraints>
+      <xy x="20" y="49" width="958" height="121287"/>
+    </constraints>
+    <properties>
+      <background color="-10196629"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <grid id="7cdaf" binding="panel2" layout-manager="FlowLayout" hgap="160" vgap="320" flow-align="1">
+        <constraints/>
+        <properties>
+          <maximumSize width="320" height="640"/>
+        </properties>
+        <border type="none"/>
+        <children/>
+      </grid>
+      <grid id="522c8" binding="panel3" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+        <constraints/>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="89135" class="javax.swing.JLabel" binding="welcomeLabel">
+            <constraints/>
+            <properties>
+              <font name="Comic Sans MS" size="22" style="3"/>
+              <foreground color="-4480638"/>
+              <text value="Kérem adja le a rendelését"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+    </children>
+  </grid>
+</form>
