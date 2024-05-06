@@ -2,21 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b67d54a4-fd2e-4ded-b73d-e2e8cb5cddfd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/MigLayout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Imgs/kafe.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PortaCafe.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CafeApp/CafeMainForm.form" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CafeApp/CafeMainForm.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CafeApp/CafeWelcomeForm.form" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CafeApp/CafeWelcomeForm.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CafeApp/CafeMainForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/CafeApp/CafeMainForm.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CafeApp/CafeMainForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CafeApp/CafeMainForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CafeApp/CafeWelcomeForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CafeApp/CafeWelcomeForm.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

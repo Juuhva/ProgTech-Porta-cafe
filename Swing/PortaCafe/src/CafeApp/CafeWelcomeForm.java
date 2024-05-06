@@ -24,7 +24,6 @@ public class CafeWelcomeForm extends JFrame {
         setSize(600, 400);
         setResizable(false);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        loadForm();
         setUndecorated(true);
         setLocationRelativeTo(null);
         setBackgroundImage();
@@ -105,39 +104,6 @@ public class CafeWelcomeForm extends JFrame {
         enterButton.setFocusPainted(false);
         enterButton.setContentAreaFilled(false);
         enterButton.setFont(font.deriveFont(font.BOLD,24));
-    }
-    private void loadForm() {
-        try {
-            URL url = getClass().getResource("CafeWelcomeForm.form");
-            if (url != null) {
-                panel1 = (JPanel) new javax.swing.JPanel().getClass().getClassLoader().loadClass(url.getPath()).newInstance();
-                panel1.setLayout(new BoxLayout(panel1, BoxLayout.Y_AXIS));
-                titleLabel = getTitleLabel();
-                enterButton = getEnterButton();
-            } else {
-                throw new IOException("File not found: CafeWelcomeForm.form");
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    private JLabel getTitleLabel() {
-        for (java.awt.Component component : panel1.getComponents()) {
-            if (component instanceof JLabel && "titleLabel".equals(component.getName())) {
-                return (JLabel) component;
-            }
-        }
-        return null;
-    }
-
-    private JButton getEnterButton() {
-        for (java.awt.Component component : panel1.getComponents()) {
-            if (component instanceof JButton && "enterButton".equals(component.getName())) {
-                return (JButton) component;
-            }
-        }
-        return null;
     }
 
 }
