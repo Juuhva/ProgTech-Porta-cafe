@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="400.0" prefWidth="600.0" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="portacafe.portacafe.Startcontroller">
+  <padding>
+    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+  </padding>
+   <Pane prefHeight="400.0" prefWidth="600.0" style="-fx-border-radius: 30;">
+      <children>
+         <ImageView fitHeight="400.0" fitWidth="600.0" layoutX="-20.0" layoutY="-20.0" pickOnBounds="true">
+            <image>
+               <Image url="@Imgs/kafe.png" />
+            </image>
+         </ImageView>
+        <Button layoutX="240.0" layoutY="254.0" onAction="#onHelloButtonClick" style="-fx-background-color: Transparent;" text="Kezdés!" textFill="#ffc300">
+            <effect>
+               <DropShadow />
+            </effect>
+            <font>
+               <Font name="Comic Sans MS" size="20.0" />
+            </font></Button>
+      
+        <Label fx:id="welcomeText" layoutX="59.0" layoutY="90.0" prefHeight="58.0" prefWidth="489.0" text="Üdvözli önt a Porta Café!" textFill="#ffb701">
+            <font>
+               <Font size="40.0" />
+            </font>
+            <effect>
+               <DropShadow />
+            </effect></Label>
+      </children>
+   </Pane>
+</VBox>

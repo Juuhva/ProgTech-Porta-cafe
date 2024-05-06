@@ -1,9 +1,9 @@
-package beadando.portacafe;
+package portacafe.portacafe;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
-public class HelloController {
+public class Startcontroller {
     @FXML
     private Label welcomeText;
 
