@@ -5,14 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b6f86172-6d04-4b50-a744-d59a8c545334" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/portacafe/portacafe/MainWindowController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/portacafe/portacafe/views/mainWindow.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/portacafe/portacafe/CoffeeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/portacafe/portacafe/views/coffee.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/portacafe/portacafe/MainWindowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/portacafe/portacafe/MainWindowController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/portacafe/portacafe/Startcontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/portacafe/portacafe/Startcontroller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/portacafe/portacafe/WelcomeScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/portacafe/portacafe/WelcomeScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/portacafe/portacafe/start.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/portacafe/portacafe/views/start.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/portacafe/portacafe/views/start.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/portacafe/portacafe/views/mainWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/portacafe/portacafe/views/mainWindow.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,9 +35,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2g6pdjEjiNr3FCGc9gEXfLHAJMX" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -48,6 +46,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.HelloApplication.executor": "Run",
+    "Application.MainWindowController.executor": "Run",
     "Application.WelcomeScreen.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -78,7 +77,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1715027971648</updated>
-      <workItem from="1715027972708" duration="4885000" />
+      <workItem from="1715027972708" duration="5367000" />
+      <workItem from="1715104386566" duration="9787000" />
     </task>
     <servers />
   </component>

@@ -10,7 +10,6 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="portacafe.portacafe.MainWindowController">
    <children>
       <Pane prefHeight="720.0" prefWidth="1280.0">
@@ -20,10 +19,10 @@
                   <Image url="@../Imgs/espresso.jpg" />
                </image>
             </ImageView>
-            <Label layoutX="12.0" layoutY="119.0" prefHeight="59.0" prefWidth="328.0" style="-fx-background-color: grey; -fx-opacity: 0.3;" />
-            <Label layoutX="5.0" layoutY="254.0" prefHeight="59.0" prefWidth="336.0" style="-fx-background-color: grey; -fx-opacity: 0.3;" />
-            <Label layoutX="14.0" layoutY="382.0" prefHeight="59.0" prefWidth="328.0" style="-fx-background-color: grey; -fx-opacity: 0.3;" />
-            <Button fx:id="lightCoffee" layoutY="43.0" mnemonicParsing="false" style="-fx-background-color: Transparent;" text="VILÁGOS PÖRKÖLÉSŰ KÁVÉK" textFill="#ffae00">
+            <Label layoutX="18.0" layoutY="68.0" prefHeight="59.0" prefWidth="328.0" style="-fx-background-color: grey; -fx-opacity: 0.3;" />
+            <Label layoutX="8.0" layoutY="223.0" prefHeight="59.0" prefWidth="336.0" style="-fx-background-color: grey; -fx-opacity: 0.3;" />
+            <Label layoutX="16.0" layoutY="364.0" prefHeight="59.0" prefWidth="328.0" style="-fx-background-color: grey; -fx-opacity: 0.3;" />
+            <Button fx:id="lightCoffeeButton" layoutX="5.0" layoutY="316.0" mnemonicParsing="false" onAction="#showLightCoffees" style="-fx-background-color: Transparent;" text="VILÁGOS PÖRKÖLÉSŰ KÁVÉK" textFill="#ffae00">
                <font>
                   <Font name="Comic Sans MS Bold Italic" size="22.0" />
                </font>
@@ -31,7 +30,7 @@
                   <DropShadow />
                </effect>
             </Button>
-            <Button fx:id="mediumCoffee" layoutX="2.0" layoutY="197.0" mnemonicParsing="false" style="-fx-background-color: Transparent;" text="KÖZEPES PÖRKÖLÉSŰ KÁVÉK" textFill="#ef8300">
+            <Button fx:id="mediumCoffeeButton" layoutX="6.0" layoutY="166.0" mnemonicParsing="false" style="-fx-background-color: Transparent;" text="KÖZEPES PÖRKÖLÉSŰ KÁVÉK" textFill="#ef8300">
                <font>
                   <Font name="Comic Sans MS Bold Italic" size="22.0" />
                </font>
@@ -39,7 +38,7 @@
                   <DropShadow />
                </effect>
             </Button>
-            <Button fx:id="darkCoffee" layoutX="12.0" layoutY="324.0" mnemonicParsing="false" style="-fx-background-color: Transparent;" text="SÖTÉT PÖRKÖLÉSŰ KÁVÉK" textFill="#895a09">
+            <Button fx:id="darkCoffeeButton" layoutX="12.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: Transparent;" text="SÖTÉT PÖRKÖLÉSŰ KÁVÉK" textFill="#895a09">
                <font>
                   <Font name="Comic Sans MS Bold Italic" size="22.0" />
                </font>
@@ -47,7 +46,22 @@
                   <DropShadow />
                </effect>
             </Button>
-            <Button fx:id="blondeEspresso" layoutX="423.0" layoutY="43.0" mnemonicParsing="false" style="-fx-background-color: Transparent;" text="Blonde Espresso Roast | Lágy és édes">
+            <Label layoutX="18.0" layoutY="360.0" prefHeight="67.0" prefWidth="328.0" style="visibility: true; -fx-opacity: 1;" text="A könnyedebb testű és lágy Blonde Roast kávék gyengéden felébresztik az érzékeket az enyhe pörkölés árnyalataival." textAlignment="JUSTIFY" textFill="#ffae00" wrapText="true">
+               <effect>
+                  <DropShadow blurType="TWO_PASS_BOX" />
+               </effect>
+            </Label>
+            <Label layoutX="16.0" layoutY="219.0" prefHeight="67.0" prefWidth="328.0" style="visibility: true; -fx-opacity: 1;" text="Selymes és kiegyensúlyozott, közepesen pörkölt kávéink tökéletesek minden kávészünethez." textAlignment="JUSTIFY" textFill="#ef8300" wrapText="true">
+               <effect>
+                  <DropShadow blurType="TWO_PASS_BOX" />
+               </effect>
+            </Label>
+            <Label layoutX="31.0" layoutY="64.0" prefHeight="67.0" prefWidth="301.0" style="visibility: true; -fx-opacity: 1;" text="A testesebb és merész kávék robusztus ízekkel és az intenzív pörkölés jellegzetes esszenciájával rendelkeznek." textAlignment="JUSTIFY" textFill="#895a09" wrapText="true">
+               <effect>
+                  <DropShadow blurType="TWO_PASS_BOX" />
+               </effect>
+            </Label>
+            <Button fx:id="firstCoffeeTitle" layoutX="357.0" layoutY="42.0" mnemonicParsing="false" onAction="#showFirstCoffee" style="-fx-background-color: transparent;">
                <font>
                   <Font name="Comic Sans MS Bold Italic" size="22.0" />
                </font>
@@ -55,22 +69,52 @@
                   <Glow />
                </effect>
             </Button>
-            <Label layoutX="432.0" layoutY="100.0" prefHeight="108.0" prefWidth="399.0" text="Hihetetlenül sima és finoman édes, krémes szájízt hagyva maga után. Ez a világosabb pörkölés egyedi ízt kölcsönöz eszpresszóinknak. Ezt az egyedülálló keveréket oly módon személyre szabtuk, hogy kiemelje az eszpresszó világosabb oldalát, hogy krémes testet és édes citrusos jegyeket kaphass." textAlignment="JUSTIFY" wrapText="true" />
-            <Label layoutX="14.0" layoutY="89.0" prefHeight="108.0" prefWidth="328.0" text="A könnyedebb testű és lágy Starbucks® Blonde Roast kávék gyengéden felébresztik az érzékeket az enyhe pörkölés árnyalataival." textAlignment="JUSTIFY" textFill="#ffae00" wrapText="true">
+            <Label fx:id="firstCoffeeDesc" layoutX="379.0" layoutY="88.0" prefHeight="108.0" prefWidth="412.0" textAlignment="JUSTIFY" wrapText="true" />
+            <Button fx:id="secondCoffeeTitle" layoutX="811.0" layoutY="42.0" mnemonicParsing="false" style="-fx-background-color: transparent;">
+               <font>
+                  <Font name="Comic Sans MS Bold Italic" size="22.0" />
+               </font>
                <effect>
-                  <DropShadow blurType="TWO_PASS_BOX" />
+                  <Glow />
                </effect>
-            </Label>
-            <Label layoutX="12.0" layoutY="250.0" prefHeight="67.0" prefWidth="328.0" text="Selymes és kiegyensúlyozott, közepesen pörkölt kávéink tökéletesek minden kávészünethez." textAlignment="JUSTIFY" textFill="#ef8300" wrapText="true">
+            </Button>
+            <Label fx:id="secondCoffeeDesc" layoutX="833.0" layoutY="88.0" prefHeight="108.0" prefWidth="412.0" textAlignment="JUSTIFY" wrapText="true" />
+            <Button fx:id="thirdCoffeeTitle" layoutX="357.0" layoutY="263.0" mnemonicParsing="false" style="-fx-background-color: transparent;">
+               <font>
+                  <Font name="Comic Sans MS Bold Italic" size="22.0" />
+               </font>
                <effect>
-                  <DropShadow blurType="TWO_PASS_BOX" />
+                  <Glow />
                </effect>
-            </Label>
-            <Label layoutX="31.0" layoutY="374.0" prefHeight="67.0" prefWidth="301.0" style="-fx-background-color: 1;" text="A testesebb és merész kávék robusztus ízekkel és az intenzív pörkölés jellegzetes esszenciájával rendelkeznek." textAlignment="JUSTIFY" textFill="#895a09" wrapText="true">
+            </Button>
+            <Label fx:id="thirdCoffeeDesc" layoutX="379.0" layoutY="309.0" prefHeight="108.0" prefWidth="412.0" textAlignment="JUSTIFY" wrapText="true" />
+            <Button fx:id="fourthCoffeeTitle" layoutX="811.0" layoutY="263.0" mnemonicParsing="false" style="-fx-background-color: transparent;">
+               <font>
+                  <Font name="Comic Sans MS Bold Italic" size="22.0" />
+               </font>
                <effect>
-                  <DropShadow blurType="TWO_PASS_BOX" />
+                  <Glow />
                </effect>
-            </Label>
+            </Button>
+            <Label fx:id="fourthCoffeeDesc" layoutX="833.0" layoutY="309.0" prefHeight="108.0" prefWidth="412.0" textAlignment="JUSTIFY" wrapText="true" />
+            <Button fx:id="sixthCoffeeTitle" layoutX="811.0" layoutY="494.0" mnemonicParsing="false" style="-fx-background-color: transparent;">
+               <font>
+                  <Font name="Comic Sans MS Bold Italic" size="22.0" />
+               </font>
+               <effect>
+                  <Glow />
+               </effect>
+            </Button>
+            <Label fx:id="sixthCoffeeDesc" layoutX="833.0" layoutY="540.0" prefHeight="108.0" prefWidth="412.0" textAlignment="JUSTIFY" wrapText="true" />
+            <Button fx:id="fifthCoffeeTitle" layoutX="368.0" layoutY="494.0" mnemonicParsing="false" style="-fx-background-color: transparent;">
+               <font>
+                  <Font name="Comic Sans MS Bold Italic" size="22.0" />
+               </font>
+               <effect>
+                  <Glow />
+               </effect>
+            </Button>
+            <Label fx:id="fifthCoffeeDesc" layoutX="390.0" layoutY="540.0" prefHeight="108.0" prefWidth="412.0" textAlignment="JUSTIFY" wrapText="true" />
          </children>
       </Pane>
    </children>

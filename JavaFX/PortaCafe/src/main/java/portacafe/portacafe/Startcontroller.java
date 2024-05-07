@@ -29,18 +29,17 @@ public class Startcontroller {
             try {
                 Stage thisStage = (Stage) startButton.getScene().getWindow();
                 thisStage.close();
-
                 FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("views/mainWindow.fxml"));
                 Parent root = fxmlLoader.load();
-
                 Stage stage = new Stage();
                 Scene scene = new Scene(root);
-
                 stage.initStyle(StageStyle.TRANSPARENT);
                 scene.setFill(Color.TRANSPARENT);
-
                 stage.setScene(scene);
+                stage.setAlwaysOnTop(true);
                 stage.show();
+                MainWindowController windowController = fxmlLoader.getController();
+                windowController.disableButtons(true);
             } catch (IOException e) {
                 e.printStackTrace();
             }

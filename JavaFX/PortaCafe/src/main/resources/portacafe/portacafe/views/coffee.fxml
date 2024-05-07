@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="portacafe.portacafe.CoffeeController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true">
+         <image>
+            <Image url="@../Imgs/kafes.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="backButton" layoutX="490.0" mnemonicParsing="false" onAction="#cancelSelection" style="-fx-background-color: Transparent;" text="&lt;vissza" textFill="#ffae00">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Label fx:id="coffeSelectionTitle" layoutX="14.0" layoutY="14.0" prefHeight="51.0" prefWidth="487.0" text="CoffeeTitle" textFill="#ffae00">
+         <font>
+            <Font size="32.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Label layoutX="14.0" layoutY="75.0" text="Extra feltét:" textFill="#ffae00">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Label layoutX="14.0" layoutY="124.0" text="Cukor" textFill="#ffae00">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Label layoutX="14.0" layoutY="169.0" text="Tej" textFill="#ffae00">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Label layoutX="14.0" layoutY="212.0" text="Tejszín" textFill="#ffae00">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Label layoutX="14.0" layoutY="254.0" text="Tejszínhab" textFill="#ffae00">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Label fx:id="finalPrice" layoutX="14.0" layoutY="284.0" prefHeight="100.0" prefWidth="562.0" text="Ár:" textFill="#ffae00">
+         <font>
+            <Font size="51.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Button fx:id="addToCartButton" layoutX="404.0" layoutY="325.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="170.0" style="-fx-background-color: LightGrey; -fx-background-radius: 20;" text="Kosárba" textFill="#cf8b02">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <ImageView fx:id="addSugar" fitHeight="20.0" fitWidth="20.0" layoutX="129.0" layoutY="129.0" pickOnBounds="true">
+         <image>
+            <Image url="@../Imgs/plus.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="removeSugar" fitHeight="20.0" fitWidth="20.0" layoutX="76.0" layoutY="129.0" pickOnBounds="true">
+         <image>
+            <Image url="@../Imgs/minus.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="sugarCounter" layoutX="107.0" layoutY="124.0" text="0" textFill="#ffae00">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <ImageView fx:id="addMilk" fitHeight="20.0" fitWidth="20.0" layoutX="107.0" layoutY="174.0" pickOnBounds="true">
+         <image>
+            <Image url="@../Imgs/plus.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="removeMilk" fitHeight="20.0" fitWidth="20.0" layoutX="54.0" layoutY="174.0" pickOnBounds="true">
+         <image>
+            <Image url="@../Imgs/minus.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="milkCounter" layoutX="85.0" layoutY="169.0" text="0" textFill="#ffae00">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <ImageView fx:id="addCream" fitHeight="20.0" fitWidth="20.0" layoutX="134.0" layoutY="217.0" pickOnBounds="true">
+         <image>
+            <Image url="@../Imgs/plus.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="removeCream" fitHeight="20.0" fitWidth="20.0" layoutX="81.0" layoutY="217.0" pickOnBounds="true">
+         <image>
+            <Image url="@../Imgs/minus.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="creamCounter" layoutX="112.0" layoutY="212.0" text="0" textFill="#ffae00">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <ImageView fx:id="addWhippedCream" fitHeight="20.0" fitWidth="20.0" layoutX="171.0" layoutY="259.0" pickOnBounds="true">
+         <image>
+            <Image url="@../Imgs/plus.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="removedWhippedCream" fitHeight="20.0" fitWidth="20.0" layoutX="118.0" layoutY="259.0" pickOnBounds="true">
+         <image>
+            <Image url="@../Imgs/minus.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="whippedCreamCounter" layoutX="149.0" layoutY="254.0" text="0" textFill="#ffae00">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+   </children>
+</AnchorPane>
