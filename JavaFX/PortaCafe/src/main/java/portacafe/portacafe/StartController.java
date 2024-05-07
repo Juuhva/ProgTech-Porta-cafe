@@ -5,17 +5,13 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
-import java.awt.event.ActionEvent;
-import java.beans.EventHandler;
-import java.io.File;
 import java.io.IOException;
 
-public class Startcontroller {
+public class StartController {
     @FXML
     private Button startButton;
 
@@ -38,8 +34,6 @@ public class Startcontroller {
                 stage.setScene(scene);
                 stage.setAlwaysOnTop(true);
                 stage.show();
-                MainWindowController windowController = fxmlLoader.getController();
-                windowController.disableButtons(true);
             } catch (IOException e) {
                 e.printStackTrace();
             }

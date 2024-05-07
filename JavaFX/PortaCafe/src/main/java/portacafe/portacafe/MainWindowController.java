@@ -14,7 +14,7 @@ import javafx.stage.StageStyle;
 
 import java.io.IOException;
 
-public class MainWindowController {
+public class MainWindowController  {
 
     @FXML
     Button lightCoffeeButton;
@@ -23,11 +23,17 @@ public class MainWindowController {
     @FXML
     Button darkCoffeeButton;
     @FXML
-    Button firstCoffeeTitle, secondCoffeeTitle, thirdCoffeeTitle, fourthCoffeeTitle, fifthCoffeeTitle, getFirstCoffeeTitle;
+    Button firstCoffeeTitle, secondCoffeeTitle, thirdCoffeeTitle, fourthCoffeeTitle, fifthCoffeeTitle, sixthCoffeeTitle;
     @FXML
     Label firstCoffeeDesc, secondCoffeeDesc, thirdCoffeeDesc, fourthCoffeeDesc, fifthCoffeeDesc, sixthCoffeeDesc;
 
+    @FXML
+    public void initialize() {
+        disableButtons(true);
+    }
+
     public void showLightCoffees(javafx.event.ActionEvent actionEvent) {
+        firstCoffeeDesc.setDisable(false);
         firstCoffeeTitle.setText("Blonde Espresso Roast | Lágy és édes");
         firstCoffeeTitle.setDisable(false);
         firstCoffeeDesc.setText("Hihetetlenül sima és finoman édes," +
@@ -38,18 +44,20 @@ public class MainWindowController {
                 " testet és édes citrusos jegyeket kaphass.");
     }
 
-    public void disableButtons(boolean isDisable){
-        firstCoffeeTitle.setDisable(isDisable);
-        secondCoffeeTitle.setDisable(isDisable);
-        thirdCoffeeTitle.setDisable(isDisable);
-        fourthCoffeeTitle.setDisable(isDisable);
-        fifthCoffeeTitle.setDisable(isDisable);
-        sixthCoffeeDesc.setDisable(isDisable);
+    public void disableButtons(boolean isDisabled){
+        firstCoffeeTitle.setDisable(isDisabled);
+        secondCoffeeTitle.setDisable(isDisabled);
+        thirdCoffeeTitle.setDisable(isDisabled);
+        fourthCoffeeTitle.setDisable(isDisabled);
+        fifthCoffeeTitle.setDisable(isDisabled);
+        sixthCoffeeTitle.setDisable(isDisabled);
     }
+
 
     public void showFirstCoffee(ActionEvent actionEvent) {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("views/coffee.fxml"));
+            fxmlLoader.setController(new CoffeeController(this)); // Pass "this" as argument
             Parent root = fxmlLoader.load();
             Stage stage = new Stage();
             Scene scene = new Scene(root);
@@ -57,10 +65,12 @@ public class MainWindowController {
             scene.setFill(Color.TRANSPARENT);
             stage.setScene(scene);
             stage.show();
+
             stage.setAlwaysOnTop(true);
             disableButtons(true);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
 }
