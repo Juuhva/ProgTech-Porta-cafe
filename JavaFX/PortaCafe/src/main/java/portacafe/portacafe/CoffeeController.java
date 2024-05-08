@@ -31,6 +31,8 @@ public class CoffeeController {
     public void cancelSelection(ActionEvent actionEvent) {
         Stage stage = (Stage) backButton.getScene().getWindow();
         mainWindowController.disableLightButtons(false);
+        mainWindowController.disableMediumButtons(false);
+        mainWindowController.disableDarkButtons(false);
         stage.close();
     }
 

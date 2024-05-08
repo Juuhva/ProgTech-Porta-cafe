@@ -9,6 +9,8 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.io.IOException;
 
 public class StartController {
@@ -19,6 +21,7 @@ public class StartController {
     private void initialize(){
         startScene();
     }
+
 
     private void startScene() {
         startButton.setOnAction(event -> {

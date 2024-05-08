@@ -8,10 +8,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/portacafe/portacafe/CoffeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/portacafe/portacafe/CoffeeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/portacafe/portacafe/MainWindowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/portacafe/portacafe/MainWindowController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/portacafe/portacafe/StartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/portacafe/portacafe/StartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/portacafe/portacafe/views/coffee.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/portacafe/portacafe/views/coffee.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/portacafe/portacafe/views/mainWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/portacafe/portacafe/views/mainWindow.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Swing/PortaCafe/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Swing/PortaCafe/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Swing/PortaCafe/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Swing/PortaCafe/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Swing/PortaCafe/src/CafeApp/CafeWelcomeForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/../../Swing/PortaCafe/src/CafeApp/CafeWelcomeForm.form" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +83,7 @@
       <workItem from="1715104386566" duration="15780000" />
       <workItem from="1715155947245" duration="155000" />
       <workItem from="1715162068883" duration="132000" />
-      <workItem from="1715189812903" duration="3536000" />
+      <workItem from="1715189812903" duration="8085000" />
     </task>
     <servers />
   </component>

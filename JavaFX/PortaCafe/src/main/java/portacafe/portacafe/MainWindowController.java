@@ -25,33 +25,43 @@ public class MainWindowController  {
     @FXML
     Button firstCoffeeTitle;
     @FXML
-    Button firstMediumCoffeeTitle, secondMediumCoffeeTitle,
-            thirdMediumCoffeeTitle, fourthMediumCoffeeTitle,
-            fifthMediumCoffeeTitle, sixthMediumCoffeeTitle;
+    Button firstMediumCoffee, secondMediumCoffee,
+            thirdMediumCoffee, fourthMediumCoffee,
+            fifthMediumCoffee, sixthMediumCoffee;
     @FXML
-    Pane lightPane, mediumPane;
-
-
+    Button firstDarkCoffee, secondDarkCoffee, thirdDarkCoffee;
+    @FXML
+    Pane lightPane, mediumPane, darkPane;
 
     @FXML
     public void initialize() {
-        disableLightButtons(false);
     }
 
     public void showLightCoffees(javafx.event.ActionEvent actionEvent) {
         lightCoffeeButton.setDisable(true);
         mediumCoffeeButton.setDisable(false);
+        darkCoffeeButton.setDisable(false);
         lightPane.setVisible(true);
         mediumPane.setVisible(false);
-
+        darkPane.setVisible(false);
     }
 
     public void showMediumCoffees(javafx.event.ActionEvent actionEvent) {
         mediumCoffeeButton.setDisable(true);
         lightCoffeeButton.setDisable(false);
+        darkCoffeeButton.setDisable(false);
         lightPane.setVisible(false);
         mediumPane.setVisible(true);
+        darkPane.setVisible(false);
+    }
 
+    public void showDarkCoffees(ActionEvent actionEvent) {
+        darkCoffeeButton.setDisable(true);
+        lightCoffeeButton.setDisable(false);
+        mediumCoffeeButton.setDisable(false);
+        darkPane.setVisible(true);
+        lightPane.setVisible(false);
+        mediumPane.setVisible(false);
     }
 
 
@@ -60,13 +70,19 @@ public class MainWindowController  {
     }
 
     public void disableMediumButtons(boolean isDisabled){
-        firstMediumCoffeeTitle.setDisable(isDisabled);
-        secondMediumCoffeeTitle.setDisable(isDisabled);
-        thirdMediumCoffeeTitle.setDisable(isDisabled);
-        fourthMediumCoffeeTitle.setDisable(isDisabled);
-        fifthMediumCoffeeTitle.setDisable(isDisabled);
-        sixthMediumCoffeeTitle.setDisable(isDisabled);
+        firstMediumCoffee.setDisable(isDisabled);
+        secondMediumCoffee.setDisable(isDisabled);
+        thirdMediumCoffee.setDisable(isDisabled);
+        fourthMediumCoffee.setDisable(isDisabled);
+        fifthMediumCoffee.setDisable(isDisabled);
+        sixthMediumCoffee.setDisable(isDisabled);
     }
+    public void disableDarkButtons(boolean isDisabled){
+        firstDarkCoffee.setDisable(isDisabled);
+        secondDarkCoffee.setDisable(isDisabled);
+        thirdDarkCoffee.setDisable(isDisabled);
+    }
+
 
 
     public void showCoffee(ActionEvent actionEvent) {
@@ -84,11 +100,12 @@ public class MainWindowController  {
             stage.show();
             stage.setAlwaysOnTop(true);
             disableLightButtons(true);
+            disableMediumButtons(true);
+            disableDarkButtons(true);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    public void showDarkCoffees(ActionEvent actionEvent) {
-    }
+
 }
