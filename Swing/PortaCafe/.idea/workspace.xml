@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b67d54a4-fd2e-4ded-b73d-e2e8cb5cddfd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CafeApp/CafeMainForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/CafeApp/CafeMainForm.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CafeApp/CafeMainForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CafeApp/CafeMainForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CafeApp/CafeWelcomeForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CafeApp/CafeWelcomeForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaFX/PortaCafe/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaFX/PortaCafe/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaFX/PortaCafe/src/main/java/portacafe/portacafe/CoffeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaFX/PortaCafe/src/main/java/portacafe/portacafe/CoffeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaFX/PortaCafe/src/main/java/portacafe/portacafe/MainWindowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaFX/PortaCafe/src/main/java/portacafe/portacafe/MainWindowController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaFX/PortaCafe/src/main/java/portacafe/portacafe/StartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaFX/PortaCafe/src/main/java/portacafe/portacafe/StartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaFX/PortaCafe/src/main/resources/portacafe/portacafe/views/coffee.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaFX/PortaCafe/src/main/resources/portacafe/portacafe/views/coffee.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaFX/PortaCafe/src/main/resources/portacafe/portacafe/views/mainWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaFX/PortaCafe/src/main/resources/portacafe/portacafe/views/mainWindow.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +25,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -31,6 +33,9 @@
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2g6JDhb1QurYmHCGmSMjVI0wNm9" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -43,9 +48,22 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH&quot;: &quot;287&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+    &quot;git-widget-placeholder&quot;: &quot;14-f-program-design---javafx&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/panty/OneDrive/Dokumentumok/GitHub/ProgTech-Porta-cafe/Swing/PortaCafe&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -54,8 +72,13 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1715011976840</updated>
+      <workItem from="1715156013482" duration="80000" />
+      <workItem from="1715197687587" duration="136000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

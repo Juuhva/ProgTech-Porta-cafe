@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="portacafe.portacafe.MainWindowController">
+   <children>
+      <Pane fx:id="mainPanel" prefHeight="720.0" prefWidth="1280.0">
+         <children>
+            <Pane fx:id="mediumPane" layoutX="359.0" layoutY="-2.0" prefHeight="720.0" prefWidth="925.0" style="visibility: false;">
+               <children>
+                  <Button fx:id="firstMediumCoffee" layoutX="33.0" layoutY="118.0" mnemonicParsing="false" onAction="#showCoffee" prefHeight="88.0" prefWidth="427.0" style="-fx-background-color: Transparent;" text="Colombia | Gyógynövényes és zamatos" wrapText="true">
+                     <font>
+                        <Font name="Comic Sans MS Bold Italic" size="22.0" />
+                     </font>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Button>
+                  <Label layoutX="41.0" layoutY="209.0" prefHeight="108.0" prefWidth="412.0" text="A Colombia Nariño lédús érzetet kelt és gyógynövényes ízjegyekkel rendelkezik, ami a vulkanikus talajok tápláló gazdagságáról tanúskodik. A 7500 méteres magasságban, a gyönyörű és jellegzetes kolumbiai vidék között elhelyezkedő farmok ennek a csodálatos kávénak a legjavát állítják elő. Figyelemre méltó és jellegzetes íze a kávé szerelmeseinek hűséges követőit teremti meg." textAlignment="JUSTIFY" wrapText="true" />
+                  <Button fx:id="sixthMediumCoffee" layoutX="483.0" layoutY="521.0" mnemonicParsing="false" onAction="#showCoffee" prefHeight="88.0" prefWidth="391.0" style="-fx-background-color: Transparent;" text="Pike Place® Roast | Sima és kiegyensúlyozott" wrapText="true">
+                     <font>
+                        <Font name="Comic Sans MS Bold Italic" size="22.0" />
+                     </font>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Button>
+                  <Label fx:id="secondCoffeeDesc" layoutX="483.0" layoutY="598.0" prefHeight="88.0" prefWidth="412.0" text="A Pike Place® Roast éppúgy ünnepli büszke történelmünket a piacon, mint egy szívből jövő koccintás igényes vásárlóinknak. Akár feketén, akár tejszínnel és cukorral kiegészítve szereti, egy merész, kielégítő csészét ígérünk, amely gazdag ízű, mégis kellően kiegyensúlyozott ahhoz, hogy mindennap élvezd." textAlignment="JUSTIFY" wrapText="true" />
+                  <Button fx:id="fourthMediumCoffee" layoutX="476.0" layoutY="319.0" mnemonicParsing="false" onAction="#showCoffee" prefHeight="88.0" prefWidth="419.0" style="-fx-background-color: Transparent;" text="House Blend | Élénk és kegyensúlyozott" wrapText="true">
+                     <font>
+                        <Font name="Comic Sans MS Bold Italic" size="22.0" />
+                     </font>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Button>
+                  <Label fx:id="thirdCoffeeDesc" layoutX="483.0" layoutY="407.0" prefHeight="77.0" prefWidth="412.0" text="Megtévesztően egyszerű. Latin-amerikai bab keveréke, amely csillogó, sötét gesztenye színűre pörkölt. Ízekkel teli, kiegyensúlyozó dió és kakaó ízek, csak egy kis édesség a sültből. Aroma, test és íz egyensúlyban van." textAlignment="JUSTIFY" wrapText="true" />
+                  <Button fx:id="thirdMediumCoffee" layoutX="18.0" layoutY="319.0" mnemonicParsing="false" onAction="#showCoffee" prefHeight="88.0" prefWidth="434.0" style="-fx-background-color: Transparent;" text="Guatemala Antigua | Kakaós és lágyan fűszeres" wrapText="true">
+                     <font>
+                        <Font name="Comic Sans MS Bold Italic" size="22.0" />
+                     </font>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Button>
+                  <Label fx:id="fourthCoffeeDesc" layoutX="29.0" layoutY="407.0" prefHeight="97.0" prefWidth="412.0" text="Elegáns és kifinomult, kibontakozó ízrétegekkel – a citrom, a csokoládé és a lágy fűszer jegyei. A guatemalai Antigua-völgyet 100 éves farmjairól, tápanyagban gazdag vulkáni talajáról és a minőség próbakövének számító kávéjáról őrzik." textAlignment="JUSTIFY" wrapText="true" />
+                  <Button fx:id="secondMediumCoffee" layoutX="483.0" layoutY="139.0" mnemonicParsing="false" onAction="#showCoffee" style="-fx-background-color: Transparent;" text="Ethiopia | lágy és bársonyos">
+                     <font>
+                        <Font name="Comic Sans MS Bold Italic" size="22.0" />
+                     </font>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Button>
+                  <Label layoutX="490.0" layoutY="209.0" prefHeight="59.0" prefWidth="412.0" text="Kiváló keverék a kávé rituáléjának hódolva, tiszteletben tartva Etiópia bőséges örökségét. Bársonyosan lágy textúrájával és virágos, borsos fűszerjegyeivel tisztelegünk a kávé szülőhelye előtt." textAlignment="JUSTIFY" wrapText="true" />
+                  <Button fx:id="fifthMediumCoffee" layoutX="18.0" layoutY="542.0" mnemonicParsing="false" onAction="#showCoffee" style="-fx-background-color: Transparent;" text="Kenya | Lédús és összetett">
+                     <font>
+                        <Font name="Comic Sans MS Bold Italic" size="22.0" />
+                     </font>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Button>
+                  <Label fx:id="fifthCoffeeDesc" layoutX="24.0" layoutY="598.0" prefHeight="108.0" prefWidth="406.0" text="Ragyogó, lédús savakkal, alacsony boros jegyekkel és gyümölcsös ízekkel – a fekete ribizlitől és szedertől a fanyar grapefruitig, más eredetű, összetéveszthetetlen jegyekkel –, amelyek a kávé lehűlésével egyre hangsúlyosabbá válnak. A Kenya kávé mennyei jégen tálalva, és jegeskávé keverékeink fontos összetevője." textAlignment="JUSTIFY" wrapText="true" />
+                  <Label layoutX="51.0" layoutY="14.0" prefHeight="46.0" prefWidth="391.0" text="KÖZEPES PÖRKÖLÉSŰ KÁVÉINK" wrapText="true">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="24.0" />
+                     </font>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Label>
+                  <Label layoutX="51.0" layoutY="60.0" prefHeight="59.0" prefWidth="564.0" text="A közepesen pörkölt kávébabok selymes és kiegyensúlyozott, gazdag ízjegyekkel rendelkeznek." wrapText="true">
+                     <font>
+                        <Font name="System Italic" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="darkPane" layoutX="359.0" prefHeight="720.0" prefWidth="925.0" style="visibility: false;">
+               <children>
+                  <Label layoutX="51.0" layoutY="14.0" prefHeight="46.0" prefWidth="391.0" text="SÖTÉT PÖRKÖLÉSŰ KÁVÉINK" wrapText="true">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="24.0" />
+                     </font>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Label>
+                  <Label layoutX="51.0" layoutY="60.0" prefHeight="59.0" prefWidth="564.0" text="A sötétre pörkölt kávék testesebbek, erőteljes, merész ízűek" wrapText="true">
+                     <font>
+                        <Font name="System Italic" size="18.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="firstDarkCoffee" layoutX="29.0" layoutY="116.0" mnemonicParsing="false" onAction="#showCoffee" prefHeight="88.0" prefWidth="434.0" style="-fx-background-color: Transparent;" text="Caffè Verona® | Sötét kakaó és pörkölt-édes" wrapText="true">
+                     <font>
+                        <Font name="Comic Sans MS Bold Italic" size="22.0" />
+                     </font>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Button>
+                  <Label layoutX="41.0" layoutY="195.0" prefHeight="108.0" prefWidth="412.0" text="A Caffè Verona® egy csábító keverék latin-amerikai és indonéziai kávébabokból, enyhe Italian Roast érintéssel, mély, lélekemelő édességgel. Mivel ez az élvezetes kombináció kiválóan illik a csokoládéhoz, Valentin-napi kedvenc lett - és az a kávé, amelyet leginkább a romantikához kötünk. Bella, Bella!" textAlignment="JUSTIFY" wrapText="true" />
+                  <Button fx:id="thirdDarkCoffee" layoutX="18.0" layoutY="319.0" mnemonicParsing="false" onAction="#showCoffee" prefHeight="88.0" prefWidth="391.0" style="-fx-background-color: Transparent;" text="Espresso Roast | Gazdag és karamellízű" wrapText="true">
+                     <font>
+                        <Font name="Comic Sans MS Bold Italic" size="22.0" />
+                     </font>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Button>
+                  <Label fx:id="secondCoffeeDesc1" layoutX="29.0" layoutY="407.0" prefHeight="77.0" prefWidth="412.0" text="Speciális keverék latin-amerikai és ázsiai fekete pörkölt kávébabokból, gazdag és karamellás ízzel. Mivel ennek a sűrű, testes főzött kávénak telt íze van, amely jól kivehető a tej íze mellett, ezért tökéletes alapot jelent egy latte vagy cappuccino elkészítéséhez otthon." textAlignment="JUSTIFY" wrapText="true" />
+                  <Button fx:id="secondDarkCoffee" layoutX="481.0" layoutY="131.0" mnemonicParsing="false" onAction="#showCoffee" prefHeight="59.0" prefWidth="412.0" style="-fx-background-color: Transparent;" text="Sumatra | földes és gyógynövényes" wrapText="true">
+                     <font>
+                        <Font name="Comic Sans MS Bold Italic" size="22.0" />
+                     </font>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Button>
+                  <Label fx:id="thirdCoffeeDesc1" layoutX="495.0" layoutY="204.0" prefHeight="88.0" prefWidth="406.0" text="Telt, vajasan testes kávé, szinte savasság nélkül, így az intenzitása és ízvilága szinte táncra perdül az ember nyelvén. Ne értsd félre, ez tényleg egy szürcsölhető kávé. A koncentrált gyógyfüves jellege és föld közeli aromája azonnal felismerhetővé teszi ezt a speciális kávét, amely azonnal nyomot hagy a szívünkben és a pólónkon." textAlignment="JUSTIFY" wrapText="true" />
+               </children>
+            </Pane>
+            <Pane fx:id="lightPane" layoutX="358.0" layoutY="-2.0" prefHeight="720.0" prefWidth="925.0" style="visibility: false;">
+               <children>
+                  <Label layoutX="51.0" layoutY="14.0" prefHeight="46.0" prefWidth="391.0" text="VILÁGOS PÖKÖLÉSŰ KÁVÉINK" wrapText="true">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="24.0" />
+                     </font>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Label>
+                  <Label layoutX="51.0" layoutY="60.0" prefHeight="59.0" prefWidth="564.0" text="A Blonde Roast kávébab pörkölési ideje rövidebb, ami egy lágyabb ízű, könnyen iható kávét eredményez." wrapText="true">
+                     <font>
+                        <Font name="System Italic" size="18.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="firstCoffeeTitle" layoutX="29.0" layoutY="116.0" mnemonicParsing="false" onAction="#showCoffee" style="-fx-background-color: transparent;" text="Blonde Espresso Roast | Lágy és édes">
+                     <font>
+                        <Font name="Comic Sans MS Bold Italic" size="22.0" />
+                     </font>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Button>
+                  <Label fx:id="firstCoffeeDesc" layoutX="40.0" layoutY="175.0" prefHeight="88.0" prefWidth="412.0" text="Hihetetlenül sima és finoman édes, krémes szájízt hagyva maga után. Ez a világosabb pörkölés egyedi ízt kölcsönöz eszpresszóinknak. Ezt az egyedülálló keveréket oly módon személyre szabtuk, hogy kiemelje az eszpresszó világosabb oldalát, hogy krémes testet és édes citrusos jegyeket kaphass." textAlignment="JUSTIFY" wrapText="true" />
+               </children>
+            </Pane>
+            <ImageView fitHeight="720.0" fitWidth="362.0" layoutX="-5.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../Imgs/espresso.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="18.0" layoutY="68.0" prefHeight="59.0" prefWidth="328.0" style="-fx-background-color: grey; -fx-opacity: 0.3;" />
+            <Label layoutX="8.0" layoutY="223.0" prefHeight="59.0" prefWidth="336.0" style="-fx-background-color: grey; -fx-opacity: 0.3;" />
+            <Label layoutX="16.0" layoutY="364.0" prefHeight="59.0" prefWidth="328.0" style="-fx-background-color: grey; -fx-opacity: 0.3;" />
+            <Button fx:id="lightCoffeeButton" layoutX="5.0" layoutY="316.0" mnemonicParsing="false" onAction="#showLightCoffees" style="-fx-background-color: Transparent;" text="VILÁGOS PÖRKÖLÉSŰ KÁVÉK" textFill="#ffae00">
+               <font>
+                  <Font name="Comic Sans MS Bold Italic" size="22.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+            <Button fx:id="mediumCoffeeButton" layoutX="6.0" layoutY="166.0" mnemonicParsing="false" onAction="#showMediumCoffees" style="-fx-background-color: Transparent;" text="KÖZEPES PÖRKÖLÉSŰ KÁVÉK" textFill="#ef8300">
+               <font>
+                  <Font name="Comic Sans MS Bold Italic" size="22.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+            <Button fx:id="darkCoffeeButton" layoutX="12.0" layoutY="14.0" mnemonicParsing="false" onAction="#showDarkCoffees" style="-fx-background-color: Transparent;" text="SÖTÉT PÖRKÖLÉSŰ KÁVÉK" textFill="#895a09">
+               <font>
+                  <Font name="Comic Sans MS Bold Italic" size="22.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+            <Label layoutX="18.0" layoutY="360.0" prefHeight="67.0" prefWidth="328.0" style="visibility: true; -fx-opacity: 1;" text="A könnyedebb testű és lágy Blonde Roast kávék gyengéden felébresztik az érzékeket az enyhe pörkölés árnyalataival." textAlignment="JUSTIFY" textFill="#ffae00" wrapText="true">
+               <effect>
+                  <DropShadow blurType="TWO_PASS_BOX" />
+               </effect>
+            </Label>
+            <Label layoutX="16.0" layoutY="219.0" prefHeight="67.0" prefWidth="328.0" style="visibility: true; -fx-opacity: 1;" text="Selymes és kiegyensúlyozott, közepesen pörkölt kávéink tökéletesek minden kávészünethez." textAlignment="JUSTIFY" textFill="#ef8300" wrapText="true">
+               <effect>
+                  <DropShadow blurType="TWO_PASS_BOX" />
+               </effect>
+            </Label>
+            <Label layoutX="31.0" layoutY="64.0" prefHeight="67.0" prefWidth="301.0" style="visibility: true; -fx-opacity: 1;" text="A testesebb és merész kávék robusztus ízekkel és az intenzív pörkölés jellegzetes esszenciájával rendelkeznek." textAlignment="JUSTIFY" textFill="#895a09" wrapText="true">
+               <effect>
+                  <DropShadow blurType="TWO_PASS_BOX" />
+               </effect>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
