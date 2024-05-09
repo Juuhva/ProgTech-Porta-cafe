@@ -46,6 +46,8 @@ A programnak el kell tudni érnie az adatbázis-szervert, továbbá rendelkeznie
 
 ## 7. Adatbázis terv
 
+![Adatbázis](./imgs/adatbazis.png)
+
 ## 8. Implementációs terv
 
 A szoftver fejlesztéséhez Java programozási nyelvet használunk, a frontend kialakítását Swing-gel, az adatbázis kialakítását pedig MySQL-rendszerrel oldjuk meg. Ügyelni kell a logolásra, illetve az OCP és SRP szabályainak betartására. Terv szerint a **dekorátor**, **stratégia** és **sablonmetódus** tervezési mintákat használjuk fel.
