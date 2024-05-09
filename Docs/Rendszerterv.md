@@ -5,8 +5,11 @@ Az alkalmazás célja egy kávézó szoftveralkalmazás létrehozása. A felhasz
 
 ## 2. Projektterv
 
+A projektet Java programnyelven fejlesztjük, bizonyos tervezési minták felhasználásával, a követelményeknek megfelelően.
 
 ## 3. Folyamatok modellje
+
+![Folyamatábra](./imgs/folyamatabra.png)
 
 ## 4. Követelmények
 
@@ -35,13 +38,17 @@ A fejlesztés során használt eszközök:
 
 ### Adatbázis rendszer
 
+A szoftver MySQL-alapú adatbázis szervert használ.
 
 ### A program elérése, kezelése
 
+A programnak el kell tudni érnie az adatbázis-szervert, továbbá rendelkeznie kell Java futtatókörnyezettel.
 
 ## 7. Adatbázis terv
 
 ## 8. Implementációs terv
+
+A szoftver fejlesztéséhez Java programozási nyelvet használunk, a frontend kialakítását Swing-gel, az adatbázis kialakítását pedig MySQL-rendszerrel oldjuk meg. Ügyelni kell a logolásra, illetve az OCP és SRP szabályainak betartására. Terv szerint a **dekorátor**, **stratégia** és **sablonmetódus** tervezési mintákat használjuk fel.
 
 ## 9. Tesztterv
 
@@ -54,3 +61,4 @@ Az alkalmazás önmagában nem igényel telepítést, viszont szükséges hozzá
 
 ## 11. Karbantartási terv
 
+A Java-keretrendszert három havonta frissíteni kell, és javítani kell azokat a részeket, amelyek az új verzió során elavultakká váltak. Figyelni kell a felhasználók által jelzett szoftverhibákra, és súlyosság szerint kell prioritásba venni őket (hotfixek kritikus hibák javítására, havi frissítések kisebbekre). Választék bővítése esetén bővítendő a szoftver is.
