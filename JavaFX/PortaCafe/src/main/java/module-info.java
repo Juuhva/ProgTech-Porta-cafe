@@ -3,6 +3,10 @@ module portacafe.portacafe {
     requires javafx.fxml;
     requires java.desktop;
     requires jdk.compiler;
+    requires java.sql;
+    requires org.apache.logging.log4j.core;
+    requires org.apache.logging.log4j;
+    requires org.xerial.sqlitejdbc;
 
 
     opens portacafe.portacafe to javafx.fxml;
