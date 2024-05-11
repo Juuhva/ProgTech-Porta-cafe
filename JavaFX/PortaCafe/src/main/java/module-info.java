@@ -3,6 +3,7 @@ module portacafe.portacafe {
     requires javafx.fxml;
     requires java.desktop;
     requires jdk.compiler;
+    requires java.sql;
 
 
     opens portacafe.portacafe to javafx.fxml;
