@@ -16,13 +16,13 @@ CREATE TABLE ToppingsOnOrderedCoffee (
     ToppingCount INTEGER NOT NULL,
 
     PRIMARY KEY (OrderedCoffeeID, ToppingTypeID),
-    FOREIGN KEY (OrderedCoffeeID) REFERENCES  OrderedCoffees(ID)
+    FOREIGN KEY (OrderedCoffeeID) REFERENCES  OrderedCoffees(ID) ON DELETE CASCADE
 );
 
 CREATE TABLE Cart (
     OrderedCoffeeID INTEGER PRIMARY KEY,
 
-    FOREIGN KEY (OrderedCoffeeID) REFERENCES OrderedCoffees(ID)
+    FOREIGN KEY (OrderedCoffeeID) REFERENCES OrderedCoffees(ID) ON DELETE CASCADE
 );
 
 CREATE TABLE CoffeesInOrder (
