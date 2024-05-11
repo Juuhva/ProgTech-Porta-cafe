@@ -51,9 +51,4 @@ public class FinishOrderCommand implements SqliteCommand {
             MessageDialog.showError("Nem sikerült véglegesíteni a rendelést.");
         }
     }
-
-    public static void main(String[] args) throws SQLException {
-        new FinishOrderCommand(0)
-                .execute(SqliteConnection.getConnection());
-    }
 }

@@ -42,22 +42,4 @@ public class ListCartContentCommand implements SqliteQueryCommand<OrderedCoffeeE
             MessageDialog.showError("Nem sikerült kilistázni a kosarat.");
         }
     }
-
-    public static void main(String[] args) throws SQLException {
-        ListCartContentCommand cmd =
-                new ListCartContentCommand();
-        cmd.execute(SqliteConnection.getConnection());
-        List<OrderedCoffeeEntry> entries = cmd.getQueryResults();
-
-        for (int i = 0; i < entries.size(); i++) {
-            OrderedCoffeeEntry entry = entries.get(i);
-            log.log(Level.INFO, String.format("------%d------",
-                    entry.orderedCoffeeId));
-
-            for(Integer type : entry.toppings.keySet()) {
-                log.log(Level.INFO, String.format("type %d: %d db",
-                        type, entry.toppings.get(type)));
-            }
-        }
-    }
 }

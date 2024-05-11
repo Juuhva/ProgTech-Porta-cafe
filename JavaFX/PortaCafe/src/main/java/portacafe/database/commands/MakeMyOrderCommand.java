@@ -78,11 +78,4 @@ public class MakeMyOrderCommand implements SqliteInsertCommand<Integer> {
                     orderId, orderedCoffeeId));
         }
     }
-
-    public static void main(String[] args) throws SQLException {
-        SqliteInsertCommand<Integer> cmd =
-                new MakeMyOrderCommand();
-        cmd.execute(SqliteConnection.getConnection());
-        log.log(Level.INFO, cmd.getID());
-    }
 }

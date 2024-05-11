@@ -55,11 +55,4 @@ public class UpdateCoffeeInCart implements SqliteCommand {
             MessageDialog.showError("Nem sikerült módosítani a kávé tartalmát.");
         }
     }
-
-    public static void main(String[] args) throws SQLException {
-        int id = 5;
-        int[] modifiedToppings = new int[] {0,0,3,1};
-
-        new UpdateCoffeeInCart(id, modifiedToppings).execute(SqliteConnection.getConnection());
-    }
 }

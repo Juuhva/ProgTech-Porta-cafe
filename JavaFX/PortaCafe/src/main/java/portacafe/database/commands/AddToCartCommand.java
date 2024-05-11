@@ -60,13 +60,4 @@ public class AddToCartCommand implements SqliteInsertCommand<Integer> {
     public Integer getID() {
         return orderedCoffeeId;
     }
-
-    public static void main(String[] args) throws SQLException {
-        int coffeeType = 0;
-        int[] toppings = new int[] {0, 3, 2, 1, 3, 2, 3};
-
-        SqliteInsertCommand<Integer> command = new AddToCartCommand(coffeeType, toppings);
-        command.execute(SqliteConnection.getConnection());
-        log.log(Level.INFO, command.getID());
-    }
 }

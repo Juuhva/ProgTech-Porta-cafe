@@ -69,28 +69,4 @@ public class ListOrdersCommand implements SqliteQueryCommand<OrderEntry>{
             entry.orderedCoffees.add(cmd.getResult());
         }
     }
-
-    public static void main(String[] args) throws SQLException {
-        SqliteQueryCommand<OrderEntry> cmd =
-                new ListOrdersCommand();
-        cmd.execute(SqliteConnection.getConnection());
-        List<OrderEntry> entries = cmd.getQueryResults();
-
-        for (int i = 0; i < entries.size(); i++) {
-            OrderEntry orderEntry = entries.get(i);
-            System.out.printf("-----ORDER:%d-----%n", orderEntry.orderId);
-            System.out.printf("- Ordered at: %s%n", orderEntry.orderedAt.toLocalDateTime());
-            System.out.printf("- Is completed: %b%n", orderEntry.completed);
-            System.out.printf("- Coffees in order:%n");
-
-            for (int j = 0; j < orderEntry.orderedCoffees.size(); j++) {
-                OrderedCoffeeEntry coffeeEntry = orderEntry.orderedCoffees.get(j);
-                System.out.printf(" - Coffee #%d%n", coffeeEntry.orderedCoffeeId);
-                for (int toppingId : coffeeEntry.toppings.keySet()) {
-                    System.out.printf("  - Topping #%d: x%d%n",
-                            toppingId, coffeeEntry.toppings.get(toppingId));
-                }
-            }
-        }
-    }
 }

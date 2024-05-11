@@ -28,8 +28,4 @@ public class ClearCartCommand implements SqliteCommand {
             //MessageDialog.showError("Nem sikerült kiüríteni a kosarat.");
         }
     }
-
-    public static void main(String[] args) throws SQLException {
-        new ClearCartCommand().execute(SqliteConnection.getConnection());
-    }
 }

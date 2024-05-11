@@ -46,8 +46,4 @@ public class RemoveFromCartCommand implements SqliteCommand {
             MessageDialog.showError("Nem sikerült törölni a kávét a kosárból.");
         }
     }
-
-    public static void main(String[] args) throws Exception {
-        new RemoveFromCartCommand(4).execute(SqliteConnection.getConnection());
-    }
 }
