@@ -50,15 +50,17 @@ public class Kiosk {
         cmd.execute(connection);
         pendingCoffees = cmd.getQueryResults();
 
-        while(!pendingCoffees.isEmpty() || machinesAreStillWorking()) {
-            synchronized (madeCoffees) {
+        synchronized (madeCoffees) {
+            while(!pendingCoffees.isEmpty() || machinesAreStillWorking()) {
                 for (int i = 0; i < pendingCoffees.size(); i++) {
                     if(tryCreateCoffee(pendingCoffees.get(i))) {
                         pendingCoffees.remove(i);
                         i--;
                     }
                 }
-                madeCoffees.wait();
+
+                if(!pendingCoffees.isEmpty() || machinesAreStillWorking())
+                    madeCoffees.wait();
             }
         }
 
@@ -115,5 +117,11 @@ public class Kiosk {
     }
     public int getLastOrderID() {
         return orderID;
+    }
+
+
+    public static void main(String[] args) throws InterruptedException {
+        Kiosk kiosk = new Kiosk();
+        kiosk.brewAllCoffeesInOrder();
     }
 }
