@@ -118,10 +118,4 @@ public class Kiosk {
     public int getLastOrderID() {
         return orderID;
     }
-
-
-    public static void main(String[] args) throws InterruptedException {
-        Kiosk kiosk = new Kiosk();
-        kiosk.brewAllCoffeesInOrder();
-    }
 }
