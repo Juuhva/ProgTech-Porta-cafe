@@ -87,17 +87,7 @@
             <DropShadow />
          </effect>
       </Button>
-      <ImageView fx:id="addSugar" fitHeight="20.0" fitWidth="20.0" layoutX="129.0" layoutY="169.0" pickOnBounds="true">
-         <image>
-            <Image url="@../Imgs/plus.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="removeSugar" fitHeight="20.0" fitWidth="20.0" layoutX="76.0" layoutY="169.0" pickOnBounds="true">
-         <image>
-            <Image url="@../Imgs/minus.png" />
-         </image>
-      </ImageView>
-      <Label fx:id="sugarCounter" layoutX="107.0" layoutY="164.0" text="0" textFill="#ffae00">
+      <Label fx:id="sugarCounter" layoutX="117.0" layoutY="164.0" text="0" textFill="#ffae00">
          <font>
             <Font size="20.0" />
          </font>
@@ -105,16 +95,6 @@
             <DropShadow />
          </effect>
       </Label>
-      <ImageView fx:id="addMilk" fitHeight="20.0" fitWidth="20.0" layoutX="107.0" layoutY="214.0" pickOnBounds="true">
-         <image>
-            <Image url="@../Imgs/plus.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="removeMilk" fitHeight="20.0" fitWidth="20.0" layoutX="54.0" layoutY="214.0" pickOnBounds="true">
-         <image>
-            <Image url="@../Imgs/minus.png" />
-         </image>
-      </ImageView>
       <Label fx:id="milkCounter" layoutX="85.0" layoutY="209.0" text="0" textFill="#ffae00">
          <font>
             <Font size="20.0" />
@@ -123,16 +103,6 @@
             <DropShadow />
          </effect>
       </Label>
-      <ImageView fx:id="addCream" fitHeight="20.0" fitWidth="20.0" layoutX="134.0" layoutY="257.0" pickOnBounds="true">
-         <image>
-            <Image url="@../Imgs/plus.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="removeCream" fitHeight="20.0" fitWidth="20.0" layoutX="81.0" layoutY="257.0" pickOnBounds="true">
-         <image>
-            <Image url="@../Imgs/minus.png" />
-         </image>
-      </ImageView>
       <Label fx:id="creamCounter" layoutX="112.0" layoutY="252.0" text="0" textFill="#ffae00">
          <font>
             <Font size="20.0" />
@@ -141,16 +111,6 @@
             <DropShadow />
          </effect>
       </Label>
-      <ImageView fx:id="addWhippedCream" fitHeight="20.0" fitWidth="20.0" layoutX="171.0" layoutY="299.0" pickOnBounds="true">
-         <image>
-            <Image url="@../Imgs/plus.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="removedWhippedCream" fitHeight="20.0" fitWidth="20.0" layoutX="118.0" layoutY="299.0" pickOnBounds="true">
-         <image>
-            <Image url="@../Imgs/minus.png" />
-         </image>
-      </ImageView>
       <Label fx:id="whippedCreamCounter" layoutX="149.0" layoutY="294.0" text="0" textFill="#ffae00">
          <font>
             <Font size="20.0" />
@@ -159,5 +119,69 @@
             <DropShadow />
          </effect>
       </Label>
+      <Button fx:id="addSugarButton" layoutX="136.0" layoutY="159.0" mnemonicParsing="false" onAction="#addSugar" prefHeight="30.0" prefWidth="36.0" style="-fx-background-color: transparent;" text="+" textFill="#ffae00" wrapText="true">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button fx:id="removeSugarButton1" layoutX="75.0" layoutY="159.0" mnemonicParsing="false" onAction="#addSugar" prefHeight="35.0" prefWidth="26.0" style="-fx-background-color: transparent;" text="-" textFill="#ffae00" wrapText="true">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button fx:id="addMilkButton" layoutX="103.0" layoutY="204.0" mnemonicParsing="false" onAction="#addMilk" prefHeight="30.0" prefWidth="36.0" style="-fx-background-color: transparent;" text="+" textFill="#ffae00" wrapText="true">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button fx:id="removeMilkButton" layoutX="42.0" layoutY="204.0" mnemonicParsing="false" onAction="#removeMilk" prefHeight="35.0" prefWidth="26.0" style="-fx-background-color: transparent;" text="-" textFill="#ffae00" wrapText="true">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button fx:id="addCreamButton" layoutX="135.0" layoutY="247.0" mnemonicParsing="false" onAction="#addCream" prefHeight="30.0" prefWidth="36.0" style="-fx-background-color: transparent;" text="+" textFill="#ffae00" wrapText="true">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button fx:id="removeCreamButton" layoutX="74.0" layoutY="247.0" mnemonicParsing="false" onAction="#removeCream" prefHeight="35.0" prefWidth="26.0" style="-fx-background-color: transparent;" text="-" textFill="#ffae00" wrapText="true">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button fx:id="addWhippedCreamButton" layoutX="167.0" layoutY="289.0" mnemonicParsing="false" onAction="#addWhippedCream" prefHeight="30.0" prefWidth="36.0" style="-fx-background-color: transparent;" text="+" textFill="#ffae00" wrapText="true">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button fx:id="removeWhippedCreamButton" layoutX="106.0" layoutY="289.0" mnemonicParsing="false" onAction="#removeWhippedCream" prefHeight="35.0" prefWidth="26.0" style="-fx-background-color: transparent;" text="-" textFill="#ffae00" wrapText="true">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
    </children>
 </AnchorPane>

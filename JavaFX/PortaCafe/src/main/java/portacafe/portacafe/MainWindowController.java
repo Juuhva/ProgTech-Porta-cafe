@@ -13,6 +13,7 @@ import javafx.stage.StageStyle;
 
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class MainWindowController  {
 
@@ -112,6 +113,8 @@ public class MainWindowController  {
             disableDarkButtons(true);
         } catch (IOException e) {
             e.printStackTrace();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
         }
     }
 
@@ -135,6 +138,8 @@ public class MainWindowController  {
             disableDarkButtons(true);
         } catch (IOException e) {
             e.printStackTrace();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
         }
     }
 }

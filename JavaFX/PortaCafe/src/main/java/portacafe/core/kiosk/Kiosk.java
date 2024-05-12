@@ -25,7 +25,7 @@ public class Kiosk {
             new CoffeeMachine(new AllInOneCoffeeFactory(), new ToppingFactory(), 450)
     };
     public int orderID = -1;
-
+/*
     public synchronized List<AbstractCoffee> brewAllCoffeesInOrder() throws InterruptedException {
         List<AbstractCoffee> madeCoffees = new ArrayList<>();
         List<OrderedCoffeeEntry> pendingCoffees;
@@ -60,7 +60,7 @@ public class Kiosk {
         for (int i = 0; i < machines.length; i++) {
             machines
         }
-    }
+    }*/
 
     public int getLastOrderID() {
         return orderID;
