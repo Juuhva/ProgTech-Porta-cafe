@@ -3,8 +3,6 @@ package portacafe.core.coffees.abstracts;
 import java.util.List;
 
 public abstract class AbstractCoffee {
-    private static final int MAX_COFFEES_PER_ROAST_CATEGORY = 100;
-
     public abstract int getDBCoffeeType();
 
     public abstract String getCoffeeName();
