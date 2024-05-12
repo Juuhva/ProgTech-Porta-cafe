@@ -8,6 +8,7 @@ import portacafe.core.coffees.abstracts.AbstractTopping;
 import portacafe.core.coffees.roasts.LightCoffee;
 import portacafe.core.coffees.toppings.CreamTopping;
 import portacafe.core.exceptions.CantBrewCoffeeException;
+import portacafe.core.factories.AbstractCoffeeFactory;
 
 import java.util.Objects;
 import java.util.function.Function;
@@ -17,8 +18,10 @@ public class CoffeeMachine {
 
     private CoffeeStrategy strategy;
     private AbstractCoffee brewedCoffee;
+    private AbstractCoffeeFactory coffeeFactory;
 
-    public CoffeeMachine(CoffeeStrategy strategy) {
+    public CoffeeMachine(AbstractCoffeeFactory factory, CoffeeStrategy strategy) {
+        this.coffeeFactory = factory;
         this.strategy = strategy;
     }
 
