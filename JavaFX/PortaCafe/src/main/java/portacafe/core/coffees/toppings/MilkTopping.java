@@ -4,6 +4,8 @@ import portacafe.core.coffees.abstracts.AbstractCoffee;
 import portacafe.core.coffees.abstracts.AbstractTopping;
 
 public class MilkTopping extends AbstractTopping {
+    public static final int ID = 1;
+
     public MilkTopping(AbstractCoffee coffee) {
         super(coffee);
     }
@@ -15,9 +17,5 @@ public class MilkTopping extends AbstractTopping {
     @Override
     public int getToppingPrice() {
         return 20;
-    }
-    @Override
-    public int getDBToppingType() {
-        return 2;
     }
 }

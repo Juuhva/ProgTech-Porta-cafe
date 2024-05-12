@@ -79,7 +79,7 @@
             <DropShadow />
          </effect>
       </Label>
-      <Button fx:id="addToCartButton" layoutX="404.0" layoutY="325.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="170.0" style="-fx-background-color: LightGrey; -fx-background-radius: 20;" text="Kosárba" textFill="#cf8b02">
+      <Button fx:id="addToCartButton" layoutX="404.0" layoutY="325.0" mnemonicParsing="false" onAction="#addToCart" prefHeight="43.0" prefWidth="170.0" style="-fx-background-color: LightGrey; -fx-background-radius: 20;" text="Kosárba" textFill="#cf8b02">
          <font>
             <Font size="20.0" />
          </font>
