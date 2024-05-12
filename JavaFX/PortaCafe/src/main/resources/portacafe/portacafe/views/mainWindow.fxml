@@ -202,6 +202,14 @@
                   <DropShadow blurType="TWO_PASS_BOX" />
                </effect>
             </Label>
+            <Button fx:id="viewCartButton" layoutX="61.0" layoutY="626.0" mnemonicParsing="false" onAction="#showCartItems" prefHeight="43.0" prefWidth="231.0" style="-fx-background-color: LightGrey; -fx-background-radius: 20;" text="Kosár megtekintése" textFill="#cf8b02">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
          </children>
       </Pane>
    </children>

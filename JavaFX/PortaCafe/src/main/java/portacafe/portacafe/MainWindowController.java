@@ -32,6 +32,8 @@ public class MainWindowController  {
     Button firstDarkCoffee, secondDarkCoffee, thirdDarkCoffee;
     @FXML
     Pane lightPane, mediumPane, darkPane;
+    @FXML
+    Button viewCartButton;
 
     @FXML
     public void initialize() {
@@ -83,6 +85,12 @@ public class MainWindowController  {
         thirdDarkCoffee.setDisable(isDisabled);
     }
 
+    public void disableRoastButtons(boolean isDisabled){
+    darkCoffeeButton.setDisable(isDisabled);
+    mediumCoffeeButton.setDisable(isDisabled);
+    lightCoffeeButton.setDisable(isDisabled);
+    }
+
 
 
     public void showCoffee(ActionEvent actionEvent) {
@@ -108,4 +116,25 @@ public class MainWindowController  {
     }
 
 
+    public void showCartItems(ActionEvent actionEvent) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("views/cart.fxml"));
+            CartController cartController = new CartController(this);
+            fxmlLoader.setController(cartController);
+            Parent root = fxmlLoader.load();
+            Stage stage = new Stage();
+            Scene scene = new Scene(root);
+            stage.initStyle(StageStyle.TRANSPARENT);
+            scene.setFill(Color.TRANSPARENT);
+            stage.setScene(scene);
+            stage.show();
+            stage.setAlwaysOnTop(true);
+            disableRoastButtons(true);
+            disableLightButtons(true);
+            disableMediumButtons(true);
+            disableDarkButtons(true);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }
