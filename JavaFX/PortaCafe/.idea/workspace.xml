@@ -5,8 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b6f86172-6d04-4b50-a744-d59a8c545334" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/portacafe/core/exceptions/CantAddToppingException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/portacafe/core/factories/AbstractCoffeeFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/portacafe/core/factories/AbstractToppingFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/portacafe/core/factories/coffees/DarkCoffeeFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/portacafe/core/factories/coffees/LightCoffeeFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/portacafe/core/factories/coffees/MediumCoffeeFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/portacafe/core/factories/toppings/ToppingFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/portacafe/core/coffeemachines/CoffeeMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/portacafe/core/coffeemachines/CoffeeMachine.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +24,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="FxmlFile" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -40,29 +47,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.HelloApplication.executor": "Run",
-    "Application.MainWindowController.executor": "Run",
-    "Application.WelcomeScreen.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "8-adatbzis-hozzadsa--sszektse",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/panty/OneDrive/Dokumentumok/GitHub/ProgkornyBeadando",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MainWindowController.executor&quot;: &quot;Run&quot;,
+    &quot;Application.WelcomeScreen.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;6-kvfz-stratgik-hozzadsa&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/panty/OneDrive/Dokumentumok/GitHub/ProgkornyBeadando&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "sqlite"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;sqlite&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -85,6 +92,8 @@
       <workItem from="1715162068883" duration="132000" />
       <workItem from="1715189812903" duration="8085000" />
       <workItem from="1715415445566" duration="2048000" />
+      <workItem from="1715530704420" duration="18000" />
+      <workItem from="1715530745573" duration="3114000" />
     </task>
     <servers />
   </component>
