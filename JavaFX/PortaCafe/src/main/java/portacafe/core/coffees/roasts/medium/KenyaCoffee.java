@@ -3,10 +3,6 @@ package portacafe.core.coffees.roasts.medium;
 import portacafe.core.coffees.roasts.MediumCoffee;
 
 public class KenyaCoffee extends MediumCoffee {
-    protected KenyaCoffee(int orderedCoffeeID) {
-        super(orderedCoffeeID);
-    }
-
     @Override
     protected int getCoffeeTypeIndex() {
         return 4;

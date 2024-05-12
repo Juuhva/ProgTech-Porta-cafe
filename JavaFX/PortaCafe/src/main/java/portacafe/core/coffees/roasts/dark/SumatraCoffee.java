@@ -3,10 +3,6 @@ package portacafe.core.coffees.roasts.dark;
 import portacafe.core.coffees.roasts.DarkCoffee;
 
 public class SumatraCoffee extends DarkCoffee {
-    protected SumatraCoffee(int orderedCoffeeID) {
-        super(orderedCoffeeID);
-    }
-
     @Override
     protected int getCoffeeTypeIndex() {
         return 2;
