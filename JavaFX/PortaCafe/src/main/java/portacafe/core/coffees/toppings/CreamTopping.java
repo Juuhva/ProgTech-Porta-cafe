@@ -4,6 +4,8 @@ import portacafe.core.coffees.abstracts.AbstractCoffee;
 import portacafe.core.coffees.abstracts.AbstractTopping;
 
 public class CreamTopping extends AbstractTopping {
+    public static final int ID = 2;
+
     public CreamTopping(AbstractCoffee coffee) {
         super(coffee);
     }

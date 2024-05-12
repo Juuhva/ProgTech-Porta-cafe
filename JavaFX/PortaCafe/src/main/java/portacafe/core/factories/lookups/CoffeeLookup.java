@@ -11,18 +11,18 @@ public final class CoffeeLookup extends LookupSet<Coffee> {
     private static final CoffeeLookup instance = new CoffeeLookup();
 
     private CoffeeLookup() {
-        add(0, BlondeEspressoCoffee.class);
+        add(BlondeEspressoCoffee.ID, BlondeEspressoCoffee.class);
 
-        add(100, ColombiaCoffee.class);
-        add(101, EthiopiaCoffee.class);
-        add(102, GuatemalaAntiguaCoffee.class);
-        add(103, HouseBlendCoffee.class);
-        add(104, KenyaCoffee.class);
-        add(105, PikePlaceRoastCoffee.class);
+        add(ColombiaCoffee.ID, ColombiaCoffee.class);
+        add(EthiopiaCoffee.ID, EthiopiaCoffee.class);
+        add(GuatemalaAntiguaCoffee.ID, GuatemalaAntiguaCoffee.class);
+        add(HouseBlendCoffee.ID, HouseBlendCoffee.class);
+        add(KenyaCoffee.ID, KenyaCoffee.class);
+        add(PikePlaceRoastCoffee.ID, PikePlaceRoastCoffee.class);
 
-        add(200, CaffeVeronaCoffee.class);
-        add(201, EspressoRoastCoffee.class);
-        add(202, SumatraCoffee.class);
+        add(CaffeVeronaCoffee.ID, CaffeVeronaCoffee.class);
+        add(EspressoRoastCoffee.ID, EspressoRoastCoffee.class);
+        add(SumatraCoffee.ID, SumatraCoffee.class);
     }
 
     public static CoffeeLookup set() {

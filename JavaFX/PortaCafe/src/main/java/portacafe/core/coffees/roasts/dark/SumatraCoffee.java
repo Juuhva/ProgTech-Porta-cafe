@@ -3,6 +3,7 @@ package portacafe.core.coffees.roasts.dark;
 import portacafe.core.coffees.roasts.DarkCoffee;
 
 public class SumatraCoffee extends DarkCoffee {
+    public static final int ID = 202;
 
     @Override
     public String getCoffeeName() {

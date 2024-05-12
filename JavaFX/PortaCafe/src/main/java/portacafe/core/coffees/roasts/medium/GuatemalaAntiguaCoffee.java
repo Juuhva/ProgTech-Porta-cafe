@@ -3,6 +3,7 @@ package portacafe.core.coffees.roasts.medium;
 import portacafe.core.coffees.roasts.MediumCoffee;
 
 public class GuatemalaAntiguaCoffee extends MediumCoffee {
+    public static final int ID = 102;
 
     @Override
     public String getCoffeeName() {

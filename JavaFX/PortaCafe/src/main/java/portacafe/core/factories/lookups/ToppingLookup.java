@@ -10,10 +10,10 @@ public final class ToppingLookup extends LookupSet<AbstractTopping> {
     private static final ToppingLookup instance = new ToppingLookup();
 
     private ToppingLookup() {
-        add(0, SugarTopping.class);
-        add(1, MilkTopping.class);
-        add(2, CreamTopping.class);
-        add(3, WhippedCreamTopping.class);
+        add(SugarTopping.ID, SugarTopping.class);
+        add(MilkTopping.ID, MilkTopping.class);
+        add(CreamTopping.ID, CreamTopping.class);
+        add(WhippedCreamTopping.ID, WhippedCreamTopping.class);
     }
 
     public static ToppingLookup set() {
