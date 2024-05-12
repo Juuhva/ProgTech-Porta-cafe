@@ -21,10 +21,10 @@ public class CoffeeMachine {
         this.timeForEachTask = timeForEachTask;
     }
 
-    public synchronized boolean tryBrewCoffee(int typeId) throws InterruptedException {
+    public boolean tryBrewCoffee(int typeId) throws InterruptedException {
         return tryBrewCoffee(CoffeeLookup.set().getType(typeId));
     }
-    public synchronized boolean tryBrewCoffee(Class<? extends Coffee> coffee) throws InterruptedException {
+    public boolean tryBrewCoffee(Class<? extends Coffee> coffee) throws InterruptedException {
         try {
             brewedCoffee = coffeeFactory.createCoffee(coffee);
             Thread.sleep(timeForEachTask);
@@ -34,19 +34,18 @@ public class CoffeeMachine {
         }
     }
 
-    public synchronized void putToppingOnCoffee(int typeId) throws InterruptedException {
+    public void putToppingOnCoffee(int typeId) throws InterruptedException {
         putToppingOnCoffee(ToppingLookup.set().getType(typeId));
     }
-    public synchronized void putToppingOnCoffee(Class<? extends AbstractTopping> topping) throws InterruptedException {
+    public void putToppingOnCoffee(Class<? extends AbstractTopping> topping) throws InterruptedException {
         Thread.sleep(timeForEachTask);
         brewedCoffee = toppingFactory.makeTopping(brewedCoffee, topping);
     }
 
-    public synchronized AbstractCoffee getBrewedCoffee() {
+    public AbstractCoffee getBrewedCoffee() {
         AbstractCoffee temp = brewedCoffee;
         brewedCoffee = null;
 
-        notifyAll();
         return temp;
     }
 
