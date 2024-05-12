@@ -127,7 +127,7 @@
             <DropShadow />
          </effect>
       </Button>
-      <Button fx:id="removeSugarButton1" layoutX="75.0" layoutY="159.0" mnemonicParsing="false" onAction="#addSugar" prefHeight="35.0" prefWidth="26.0" style="-fx-background-color: transparent;" text="-" textFill="#ffae00" wrapText="true">
+      <Button fx:id="removeSugarButton1" layoutX="75.0" layoutY="159.0" mnemonicParsing="false" onAction="#removeSugar" prefHeight="35.0" prefWidth="26.0" style="-fx-background-color: transparent;" text="-" textFill="#ffae00" wrapText="true">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>

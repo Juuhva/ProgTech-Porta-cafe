@@ -109,7 +109,7 @@
                      </effect>
                   </Button>
                   <Label layoutX="41.0" layoutY="195.0" prefHeight="108.0" prefWidth="412.0" text="A Caffè Verona® egy csábító keverék latin-amerikai és indonéziai kávébabokból, enyhe Italian Roast érintéssel, mély, lélekemelő édességgel. Mivel ez az élvezetes kombináció kiválóan illik a csokoládéhoz, Valentin-napi kedvenc lett - és az a kávé, amelyet leginkább a romantikához kötünk. Bella, Bella!" textAlignment="JUSTIFY" wrapText="true" />
-                  <Button fx:id="thirdDarkCoffee" layoutX="18.0" layoutY="319.0" mnemonicParsing="false" onAction="#showCoffee" prefHeight="88.0" prefWidth="391.0" style="-fx-background-color: Transparent;" text="Espresso Roast | Gazdag és karamellízű" wrapText="true">
+                  <Button fx:id="secondDarkCoffee" layoutX="481.0" layoutY="131.0" mnemonicParsing="false" onAction="#showCoffee" prefHeight="59.0" prefWidth="412.0" style="-fx-background-color: Transparent;" text="Sumatra | földes és gyógynövényes" wrapText="true">
                      <font>
                         <Font name="Comic Sans MS Bold Italic" size="22.0" />
                      </font>
@@ -118,7 +118,7 @@
                      </effect>
                   </Button>
                   <Label fx:id="secondCoffeeDesc1" layoutX="29.0" layoutY="407.0" prefHeight="77.0" prefWidth="412.0" text="Speciális keverék latin-amerikai és ázsiai fekete pörkölt kávébabokból, gazdag és karamellás ízzel. Mivel ennek a sűrű, testes főzött kávénak telt íze van, amely jól kivehető a tej íze mellett, ezért tökéletes alapot jelent egy latte vagy cappuccino elkészítéséhez otthon." textAlignment="JUSTIFY" wrapText="true" />
-                  <Button fx:id="secondDarkCoffee" layoutX="481.0" layoutY="131.0" mnemonicParsing="false" onAction="#showCoffee" prefHeight="59.0" prefWidth="412.0" style="-fx-background-color: Transparent;" text="Sumatra | földes és gyógynövényes" wrapText="true">
+                  <Button fx:id="thirdDarkCoffee" layoutX="18.0" layoutY="319.0" mnemonicParsing="false" onAction="#showCoffee" prefHeight="88.0" prefWidth="391.0" style="-fx-background-color: Transparent;" text="Espresso Roast | Gazdag és karamellízű" wrapText="true">
                      <font>
                         <Font name="Comic Sans MS Bold Italic" size="22.0" />
                      </font>

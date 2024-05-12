@@ -5,15 +5,10 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
-import org.sqlite.SQLiteConnection;
-import portacafe.core.coffees.roasts.light.BlondeEspressoCoffee;
 import portacafe.database.SqliteConnection;
 import portacafe.database.commands.AddToCartCommand;
-import portacafe.database.commands.SqliteCommand;
-import portacafe.database.commands.SqliteInsertCommand;
 
 
-import javax.swing.text.html.ImageView;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -42,11 +37,13 @@ public class CoffeeController {
 
     private MainWindowController mainWindowController;
     private String buttonText;
+    private int coffeeID;
 
 
-    public CoffeeController(MainWindowController mainWindowController, String buttonText) throws SQLException {
+    public CoffeeController(MainWindowController mainWindowController, String buttonText, int coffeeID) throws SQLException {
         this.mainWindowController = mainWindowController;
         this.buttonText = buttonText;
+        this.coffeeID = coffeeID;
     }
 
     public void enableAllButtons(){
@@ -65,7 +62,11 @@ public class CoffeeController {
     }
 
     public void removeSugar(ActionEvent actionEvent) {
-
+        if(unsortedToppings.contains(0)){
+            unsortedToppings.remove((Integer)0);
+            sugarToppingCounter--;
+            sugarCounter.setText(String.valueOf(sugarToppingCounter));
+        }
     }
 
     public void addMilk(ActionEvent actionEvent){
@@ -77,7 +78,11 @@ public class CoffeeController {
     }
 
     public void removeMilk(ActionEvent actionEvent) {
-
+        if(unsortedToppings.contains(1)){
+            unsortedToppings.remove((Integer)1);
+            milkToppingCounter--;
+            milkCounter.setText(String.valueOf(milkToppingCounter));
+        }
     }
 
     public void addCream(ActionEvent actionEvent){
@@ -88,7 +93,11 @@ public class CoffeeController {
         }
     }
     public void removeCream(ActionEvent actionEvent) {
-
+        if(unsortedToppings.contains(2)){
+            unsortedToppings.remove((Integer)2);
+            creamToppingCounter--;
+            creamCounter.setText(String.valueOf(creamToppingCounter));
+        }
     }
 
     public void addWhippedCream(ActionEvent actionEvent){
@@ -100,7 +109,11 @@ public class CoffeeController {
     }
 
     public void removeWhippedCream(ActionEvent actionEvent) {
-
+        if(unsortedToppings.contains(3)){
+            unsortedToppings.remove((Integer)3);
+            whippedCreamToppingCounter--;
+            whippedCreamCounter.setText(String.valueOf(whippedCreamToppingCounter));
+        }
     }
 
     public void cancelSelection(ActionEvent actionEvent) {
@@ -112,7 +125,7 @@ public class CoffeeController {
 
     public void addToCart(ActionEvent actionEvent) {
         int[] intToppingsArray = unsortedToppings.stream().mapToInt(Integer::intValue).toArray();
-        new AddToCartCommand(0,intToppingsArray).execute(c);
+        new AddToCartCommand(mainWindowController.coffeeID, intToppingsArray).execute(c);
     }
 
 }

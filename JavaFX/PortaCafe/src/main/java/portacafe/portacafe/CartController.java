@@ -9,9 +9,13 @@ import javafx.scene.control.Button;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import portacafe.core.coffees.abstracts.AbstractCoffee;
+import portacafe.core.factories.AbstractCoffeeFactory;
+import portacafe.core.factories.AbstractToppingFactory;
+import portacafe.core.factories.coffees.AllInOneCoffeeFactory;
+import portacafe.core.factories.toppings.ToppingFactory;
 import portacafe.database.SqliteConnection;
+import portacafe.database.commands.ClearCartCommand;
 import portacafe.database.commands.ListCartContentCommand;
-import portacafe.database.datastructures.OrderEntry;
 import javafx.scene.control.TableColumn;
 import portacafe.database.datastructures.OrderedCoffeeEntry;
 import javafx.scene.control.TableView;
@@ -19,6 +23,8 @@ import javafx.scene.control.TableView;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 
 
@@ -27,7 +33,7 @@ public class CartController implements Initializable {
     @FXML
     private Button backButton;
     @FXML
-    public TableView coffeeTable;
+    public TableView<AbstractCoffee> coffeeTable;
     @FXML
     public TableColumn<AbstractCoffee, Integer> idColumn, priceColumn, sugarColumn, milkColumn, creamColumn, whippedCreamColumn;
     @FXML
@@ -54,7 +60,20 @@ public class CartController implements Initializable {
             connection = SqliteConnection.getConnection();
             ListCartContentCommand command = new ListCartContentCommand();
             command.execute(connection);
-            ObservableList<OrderedCoffeeEntry> cartItems = FXCollections.observableArrayList(command.getQueryResults());
+            List<AbstractCoffee> coffees = new ArrayList<>();
+            AbstractCoffeeFactory factory = new AllInOneCoffeeFactory();
+            AbstractToppingFactory toppingFactory = new ToppingFactory();
+            for (OrderedCoffeeEntry entry : command.getQueryResults()) {
+                AbstractCoffee coffee = factory.createCoffee(entry.coffeeType);
+                coffee.setOrderedCoffeeID(entry.orderedCoffeeId);
+                for (Integer toppingType : entry.toppings.keySet()){
+                    for (int i = 0; i < entry.toppings.get(toppingType); i++) {
+                        coffee = toppingFactory.makeTopping(coffee, toppingType);
+                    }
+                }
+                coffees.add(coffee);
+            }
+            ObservableList<AbstractCoffee> cartItems = FXCollections.observableArrayList(coffees);
             coffeeTable.setItems(cartItems);
         } catch (SQLException e) {
             e.printStackTrace();
@@ -70,13 +89,9 @@ public class CartController implements Initializable {
     }
 
     private void initTableColumns() {
-        //idColumn.setCellValueFactory(new PropertyValueFactory<>("orderedCoffeeId"));
-        //nameColumn.setCellValueFactory(new PropertyValueFactory<>("coffeeName"));
-        //priceColumn.setCellValueFactory(new PropertyValueFactory<>("price"));
-        //sugarColumn.setCellValueFactory(new PropertyValueFactory<>("sugar"));
-        //milkColumn.setCellValueFactory(new PropertyValueFactory<>("milk"));
-        //creamColumn.setCellValueFactory(new PropertyValueFactory<>("cream"));
-        //whippedCreamColumn.setCellValueFactory(new PropertyValueFactory<>("whippedCream"));
+        idColumn.setCellValueFactory(new PropertyValueFactory<>("orderedCoffeeID"));
+        nameColumn.setCellValueFactory(new PropertyValueFactory<>("coffeeName"));
+        priceColumn.setCellValueFactory(new PropertyValueFactory<>("totalPrice"));
     }
 
     public void closeCart(ActionEvent actionEvent) {
@@ -87,5 +102,11 @@ public class CartController implements Initializable {
         mainWindowController.disableRoastButtons(false);
         mainWindowController.viewCartButton.setDisable(false);
         stage.close();
+    }
+
+    public void clearCart(ActionEvent actionEvent) throws SQLException {
+        Connection c = SqliteConnection.getConnection();
+        new ClearCartCommand().execute(c);
+        loadData();
     }
 }

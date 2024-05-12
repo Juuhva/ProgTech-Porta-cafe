@@ -9,19 +9,13 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="900.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <TableView fx:id="coffeeTable" prefHeight="400.0" prefWidth="710.0">
         <columns>
             <TableColumn fx:id="idColumn" prefWidth="25.600005745887756" style="-fx-alignment: Center;" text="id" />
-            <TableColumn fx:id="roastColumn" prefWidth="79.20001411437988" style="-fx-alignment: Center;" text="Pörkölés" />
-            <TableColumn fx:id="nameColumn" prefWidth="301.59996795654297" style="-fx-alignment: Center;" text="Kávé neve" />
-            <TableColumn fx:id="priceColumn" prefWidth="108.00009155273438" style="-fx-alignment: Center;" text="Kávé ára" />
-            <TableColumn fx:id="sugarColumn" minWidth="0.0" prefWidth="46.400054931640625" style="-fx-alignment: Center;" text="Cukor" />
-            <TableColumn fx:id="milkColumn" prefWidth="28.0" style="-fx-alignment: Center;" text="Tej" />
-            <TableColumn fx:id="creamColumn" minWidth="0.0" prefWidth="48.79998779296875" style="-fx-alignment: Center;" text="Tejszín" />
-            <TableColumn fx:id="whippedCreamColumn" prefWidth="72.0" style="-fx-alignment: Center;" text="Tejszínhab" />
+            <TableColumn fx:id="nameColumn" prefWidth="523.2000370025635" style="-fx-alignment: Center;" text="Kávé neve" />
+            <TableColumn fx:id="priceColumn" prefWidth="159.19998779296873" style="-fx-alignment: Center;" text="Kávé ára" />
         </columns>
       </TableView>
       <ImageView fitHeight="400.0" fitWidth="189.0" layoutX="710.0" pickOnBounds="true">
@@ -37,7 +31,7 @@
             <DropShadow />
          </effect>
       </Button>
-      <Button fx:id="clearCartButton" layoutX="721.0" layoutY="24.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="167.0" style="-fx-background-color: LightGrey; -fx-background-radius: 20;" text="Kosár törlése" textFill="#cf8b02">
+      <Button fx:id="clearCartButton" layoutX="721.0" layoutY="24.0" mnemonicParsing="false" onAction="#clearCart" prefHeight="43.0" prefWidth="167.0" style="-fx-background-color: LightGrey; -fx-background-radius: 20;" text="Kosár törlése" textFill="#cf8b02">
          <font>
             <Font size="20.0" />
          </font>
