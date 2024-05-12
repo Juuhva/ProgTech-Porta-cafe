@@ -11,7 +11,6 @@ public abstract class AbstractCoffee {
         return MAX_COFFEES_PER_ROAST_CATEGORY * getCoffeeRoastIndex()
                 + getCoffeeTypeIndex();
     }
-
     public abstract String getCoffeeName();
     public abstract String getCoffeeDescription();
     public abstract int getTotalPrice();
