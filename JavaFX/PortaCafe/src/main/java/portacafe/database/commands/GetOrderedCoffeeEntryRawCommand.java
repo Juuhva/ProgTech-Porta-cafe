@@ -34,7 +34,14 @@ class GetOrderedCoffeeEntryRawCommand implements SqliteCommand {
             OrderedCoffeeEntry entry = new OrderedCoffeeEntry();
             entry.orderedCoffeeId = orderedCoffeeId;
 
-            PreparedStatement stmt = connection.prepareStatement(
+            PreparedStatement stmt;
+
+            stmt = connection.prepareStatement(
+                    "SELECT CoffeeType FROM OrderedCoffees WHERE ID=?");
+            stmt.setInt(1, orderedCoffeeId);
+            entry.coffeeType = stmt.executeQuery().getInt("CoffeeType");
+
+            stmt = connection.prepareStatement(
                     "SELECT ToppingTypeID, ToppingCount FROM ToppingsOnOrderedCoffee WHERE OrderedCoffeeID=?");
             stmt.setInt(1, orderedCoffeeId);
 
