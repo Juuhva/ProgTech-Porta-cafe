@@ -36,6 +36,7 @@ public class FinishOrderCommand implements SqliteCommand {
                 throw new OrderNotFoundException();
             if(set.getBoolean("Completed"))
                 throw new OrderAlreadyFinishedException();
+            set.close();
 
             stmt = connection.prepareStatement(
                     "UPDATE Orders SET Completed=True WHERE ID=?;");

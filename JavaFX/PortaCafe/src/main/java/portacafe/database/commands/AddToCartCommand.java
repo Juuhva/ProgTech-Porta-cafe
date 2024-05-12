@@ -35,6 +35,7 @@ public class AddToCartCommand implements SqliteInsertCommand<Integer> {
             ResultSet rs = stmt.getGeneratedKeys();
             rs.next();
             orderedCoffeeId = rs.getInt(1);
+            rs.close();
 
             InsertToppingsRawCommand insertToppings =
                     new InsertToppingsRawCommand(orderedCoffeeId, unsortedToppings);
