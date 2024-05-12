@@ -23,7 +23,7 @@
             <Image url="@../Imgs/cart.png" />
          </image>
       </ImageView>
-      <Button fx:id="orderButton" layoutX="724.0" layoutY="103.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="161.0" style="-fx-background-color: LightGrey; -fx-background-radius: 20;" text="Megrendelés" textFill="#cf8b02">
+      <Button fx:id="orderButton" layoutX="724.0" layoutY="103.0" mnemonicParsing="false" onAction="#makeOrder" prefHeight="43.0" prefWidth="161.0" style="-fx-background-color: LightGrey; -fx-background-radius: 20;" text="Megrendelés" textFill="#cf8b02">
          <font>
             <Font size="20.0" />
          </font>

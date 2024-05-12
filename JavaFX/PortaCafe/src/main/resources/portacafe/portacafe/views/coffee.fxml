@@ -71,7 +71,7 @@
             <DropShadow />
          </effect>
       </Label>
-      <Label fx:id="finalPrice" layoutX="14.0" layoutY="325.0" prefHeight="64.0" prefWidth="562.0" text="Ár:" textFill="#ffae00">
+      <Label fx:id="totalPrice" layoutX="14.0" layoutY="325.0" prefHeight="64.0" prefWidth="562.0" style="visibility: false;" text="Ár:" textFill="#ffae00">
          <font>
             <Font size="51.0" />
          </font>

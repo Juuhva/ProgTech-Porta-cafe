@@ -7,6 +7,7 @@ import javafx.scene.control.Label;
 import javafx.stage.Stage;
 import portacafe.database.SqliteConnection;
 import portacafe.database.commands.AddToCartCommand;
+import portacafe.database.commands.ListCartContentCommand;
 
 
 import java.sql.Connection;
@@ -20,7 +21,7 @@ public class CoffeeController {
     @FXML
     public Label coffeSelectionTitle;
     @FXML
-    private Label sugarCounter, milkCounter, creamCounter, whippedCreamCounter;
+    private Label sugarCounter, milkCounter, creamCounter, whippedCreamCounter, totalPrice;
 
     @FXML public void initialize() {
         backButton.setOnAction(event -> cancelSelection(event));
@@ -121,7 +122,6 @@ public class CoffeeController {
         enableAllButtons();
         stage.close();
     }
-
 
     public void addToCart(ActionEvent actionEvent) {
         int[] intToppingsArray = unsortedToppings.stream().mapToInt(Integer::intValue).toArray();

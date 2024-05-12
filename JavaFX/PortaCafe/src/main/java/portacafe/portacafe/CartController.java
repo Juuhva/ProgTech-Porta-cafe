@@ -17,6 +17,7 @@ import portacafe.database.SqliteConnection;
 import portacafe.database.commands.ClearCartCommand;
 import portacafe.database.commands.ListCartContentCommand;
 import javafx.scene.control.TableColumn;
+import portacafe.database.commands.MakeMyOrderCommand;
 import portacafe.database.datastructures.OrderedCoffeeEntry;
 import javafx.scene.control.TableView;
 
@@ -107,6 +108,11 @@ public class CartController implements Initializable {
     public void clearCart(ActionEvent actionEvent) throws SQLException {
         Connection c = SqliteConnection.getConnection();
         new ClearCartCommand().execute(c);
+        loadData();
+    }
+    public void makeOrder(ActionEvent actionEvent) throws SQLException {
+        Connection c = SqliteConnection.getConnection();
+        new MakeMyOrderCommand().execute(c);
         loadData();
     }
 }
