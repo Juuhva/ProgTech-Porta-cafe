@@ -39,6 +39,7 @@ public class MakeMyOrderCommand implements SqliteInsertCommand<Integer> {
             ResultSet rs = stmt.getGeneratedKeys();
             rs.next();
             orderId = rs.getInt(1);
+            rs.close();
 
             log.log(Level.INFO, String.format("Rendelés inicializálva (rendelés kódja: %d)",
                     orderId));
@@ -77,5 +78,6 @@ public class MakeMyOrderCommand implements SqliteInsertCommand<Integer> {
             log.log(Level.INFO, String.format("A(z) %d ID-jű rendelésbe belekerült a(z) %d ID-jű kávé.",
                     orderId, orderedCoffeeId));
         }
+        cartContent.close();
     }
 }

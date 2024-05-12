@@ -37,6 +37,7 @@ public class ListCartContentCommand implements SqliteQueryCommand<OrderedCoffeeE
                 cmd.execute(connection);
                 results.add(cmd.getResult());
             }
+            set.close();
         } catch(SQLException ex) {
             log.log(Level.ERROR, ex.getLocalizedMessage());
             MessageDialog.showError("Nem sikerült kilistázni a kosarat.");

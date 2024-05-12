@@ -68,5 +68,7 @@ public class ListOrdersCommand implements SqliteQueryCommand<OrderEntry>{
             cmd.execute(connection);
             entry.orderedCoffees.add(cmd.getResult());
         }
+
+        orderedCoffeesSet.close();
     }
 }

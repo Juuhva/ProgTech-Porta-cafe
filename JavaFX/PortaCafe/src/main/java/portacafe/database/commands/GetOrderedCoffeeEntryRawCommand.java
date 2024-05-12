@@ -44,6 +44,7 @@ class GetOrderedCoffeeEntryRawCommand implements SqliteCommand {
                 int count = set.getInt("ToppingCount");
                 entry.toppings.put(toppingType, count);
             }
+            set.close();
 
             result = entry;
         } catch(SQLException ex) {
