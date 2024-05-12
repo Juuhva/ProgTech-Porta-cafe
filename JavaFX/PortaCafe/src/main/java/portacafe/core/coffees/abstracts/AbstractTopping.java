@@ -47,4 +47,8 @@ public abstract class AbstractTopping extends AbstractCoffee {
     public final int getOrderedCoffeeID() {
         return coffee.getOrderedCoffeeID();
     }
+    @Override
+    public final void setOrderedCoffeeID(int value) {
+        coffee.setOrderedCoffeeID(value);
+    }
 }

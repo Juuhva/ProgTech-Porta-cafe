@@ -16,5 +16,6 @@ public abstract class AbstractCoffee {
     public abstract int getTotalPrice();
 
     public abstract int getOrderedCoffeeID();
+    public abstract void setOrderedCoffeeID(int value);
     public void fetchToppingsIntoList(List<Integer> output) {}
 }
