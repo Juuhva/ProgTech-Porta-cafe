@@ -113,7 +113,6 @@ public class CoffeeController {
     public void addToCart(ActionEvent actionEvent) {
         int[] intToppingsArray = unsortedToppings.stream().mapToInt(Integer::intValue).toArray();
         new AddToCartCommand(0,intToppingsArray).execute(c);
-        CartController.setCoffeeName(String.valueOf(coffeSelectionTitle));
     }
 
 }

@@ -138,8 +138,6 @@ public class MainWindowController  {
             disableDarkButtons(true);
         } catch (IOException e) {
             e.printStackTrace();
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
         }
     }
 }
