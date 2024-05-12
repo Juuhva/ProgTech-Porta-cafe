@@ -16,8 +16,4 @@ public class SugarTopping extends AbstractTopping {
     public int getToppingPrice() {
         return 5;
     }
-    @Override
-    public int getDBToppingType() {
-        return 1;
-    }
 }

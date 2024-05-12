@@ -16,8 +16,4 @@ public class CreamTopping extends AbstractTopping {
     public int getToppingPrice() {
         return 40;
     }
-    @Override
-    public int getDBToppingType() {
-        return 3;
-    }
 }

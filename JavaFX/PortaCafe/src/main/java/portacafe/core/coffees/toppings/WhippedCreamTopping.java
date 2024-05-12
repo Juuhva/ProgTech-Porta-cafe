@@ -16,8 +16,4 @@ public class WhippedCreamTopping extends AbstractTopping {
     public int getToppingPrice() {
         return 100;
     }
-    @Override
-    public int getDBToppingType() {
-        return 4;
-    }
 }

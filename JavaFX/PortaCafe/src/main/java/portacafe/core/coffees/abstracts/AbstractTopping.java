@@ -1,5 +1,7 @@
 package portacafe.core.coffees.abstracts;
 
+import portacafe.core.factories.lookups.ToppingLookup;
+
 import java.util.List;
 
 public abstract class AbstractTopping extends AbstractCoffee {
@@ -12,7 +14,9 @@ public abstract class AbstractTopping extends AbstractCoffee {
     public abstract String getToppingName();
     public abstract int getToppingPrice();
 
-    public abstract int getDBToppingType();
+    public final int getDBToppingType() {
+        return ToppingLookup.set().getID(this.getClass());
+    }
 
     @Override
     public final void fetchToppingsIntoList(List<Integer> output) {
@@ -22,12 +26,8 @@ public abstract class AbstractTopping extends AbstractCoffee {
 
 
     @Override
-    protected final int getCoffeeRoastIndex() {
-        return coffee.getCoffeeRoastIndex();
-    }
-    @Override
-    protected final int getCoffeeTypeIndex() {
-        return coffee.getCoffeeTypeIndex();
+    public final int getDBCoffeeType() {
+        return coffee.getDBCoffeeType();
     }
 
     @Override
