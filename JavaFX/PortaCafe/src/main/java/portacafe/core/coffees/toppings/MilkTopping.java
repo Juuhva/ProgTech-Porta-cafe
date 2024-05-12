@@ -16,8 +16,4 @@ public class MilkTopping extends AbstractTopping {
     public int getToppingPrice() {
         return 20;
     }
-    @Override
-    public int getDBToppingType() {
-        return 2;
-    }
 }

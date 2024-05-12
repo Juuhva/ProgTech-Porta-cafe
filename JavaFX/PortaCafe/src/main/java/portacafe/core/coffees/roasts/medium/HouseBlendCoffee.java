@@ -3,10 +3,6 @@ package portacafe.core.coffees.roasts.medium;
 import portacafe.core.coffees.roasts.MediumCoffee;
 
 public class HouseBlendCoffee extends MediumCoffee {
-    @Override
-    protected int getCoffeeTypeIndex() {
-        return 3;
-    }
 
     @Override
     public String getCoffeeName() {
