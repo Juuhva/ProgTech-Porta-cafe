@@ -37,10 +37,12 @@ public class AddToCartCommand implements SqliteInsertCommand<Integer> {
             orderedCoffeeId = rs.getInt(1);
             rs.close();
 
-            InsertToppingsRawCommand insertToppings =
-                    new InsertToppingsRawCommand(orderedCoffeeId, unsortedToppings);
-            insertToppings.execute(connection);
-            insertToppings.receiveErrorIfAny();
+            if(unsortedToppings.length > 1) {
+                InsertToppingsRawCommand insertToppings =
+                        new InsertToppingsRawCommand(orderedCoffeeId, unsortedToppings);
+                insertToppings.execute(connection);
+                insertToppings.receiveErrorIfAny();
+            }
 
             stmt = connection.prepareStatement(
                     "INSERT INTO Cart VALUES(?)");

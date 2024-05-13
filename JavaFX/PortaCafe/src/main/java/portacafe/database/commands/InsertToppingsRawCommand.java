@@ -22,6 +22,7 @@ class InsertToppingsRawCommand implements SqliteCommand {
         if(unsortedToppings.length == 0)
             throw new IllegalArgumentException("A feltétek tömbje nem lehet üres.");
 
+
         this.toppings = Arrays.stream(unsortedToppings).sorted().toArray();
     }
 

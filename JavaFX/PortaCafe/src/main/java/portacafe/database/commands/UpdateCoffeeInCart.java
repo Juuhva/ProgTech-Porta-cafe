@@ -42,10 +42,12 @@ public class UpdateCoffeeInCart implements SqliteCommand {
             log.log(Level.INFO, String.format("A(z) %d. ID-jű kávé feltétei ürítve lettek.",
                     orderedCoffeeId));
 
-            InsertToppingsRawCommand insertToppings =
-                    new InsertToppingsRawCommand(orderedCoffeeId, unsortedToppings);
-            insertToppings.execute(connection);
-            insertToppings.receiveErrorIfAny();
+            if(unsortedToppings.length > 0) {
+                InsertToppingsRawCommand insertToppings =
+                        new InsertToppingsRawCommand(orderedCoffeeId, unsortedToppings);
+                insertToppings.execute(connection);
+                insertToppings.receiveErrorIfAny();
+            }
 
             connection.commit();
             log.log(Level.INFO, String.format("A(z) %d. ID-jű kávé módosítva lett a kosárban.",

@@ -13,9 +13,57 @@ public final class MessageDialog {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setHeaderText("Hiba!");
             alert.setContentText(message);
+            alert.showAndWait();
         }
         catch(Throwable ex) {
             log.log(Level.WARN, "Nem sikerült dialógust létrehozni; JavaFX nincs inicializálva.");
+        }
+    }
+
+    public static void showMessage(String message) {
+        try {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setHeaderText("Sikeres megrendelés!");
+            alert.setContentText(message);
+            alert.showAndWait();
+        }
+        catch(ExceptionInInitializerError ex) {
+            log.log(Level.WARN, "Nem sikerült megrendelni a terméket!");
+        }
+    }
+    public static void showCart(String message) {
+        try {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setHeaderText("Sikeres hozzáadás!");
+            alert.setContentText(message);
+            alert.showAndWait();
+        }
+        catch(ExceptionInInitializerError ex) {
+            log.log(Level.WARN, "Nem sikerült megrendelni a terméket!");
+        }
+    }
+
+    public static void showEmptyCart(String message) {
+        try {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setHeaderText("Kosara üres!");
+            alert.setContentText(message);
+            alert.showAndWait();
+        }
+        catch(ExceptionInInitializerError ex) {
+            log.log(Level.WARN, "Nem sikerült megrendelni a terméket!");
+        }
+    }
+
+    public static void showCompletedOrder(String message) {
+        try {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setHeaderText("Rendelése elkészült!");
+            alert.setContentText(message);
+            alert.showAndWait();
+        }
+        catch(ExceptionInInitializerError ex) {
+            log.log(Level.WARN, "Nem sikerült megrendelni a terméket!");
         }
     }
 }
