@@ -9,9 +9,7 @@
       <change beforePath="$PROJECT_DIR$/coffeeDB.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/coffeeDB.sqlite" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/portacafe/dialogs/MessageDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/portacafe/dialogs/MessageDialog.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/portacafe/portacafe/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/portacafe/portacafe/CartController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/portacafe/portacafe/CoffeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/portacafe/portacafe/CoffeeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/portacafe/portacafe/MainWindowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/portacafe/portacafe/MainWindowController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/portacafe/portacafe/StartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/portacafe/portacafe/StartController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +90,7 @@
       <workItem from="1715415445566" duration="2048000" />
       <workItem from="1715530704420" duration="18000" />
       <workItem from="1715530745573" duration="3114000" />
-      <workItem from="1715550222260" duration="8106000" />
+      <workItem from="1715550222260" duration="9496000" />
     </task>
     <servers />
   </component>

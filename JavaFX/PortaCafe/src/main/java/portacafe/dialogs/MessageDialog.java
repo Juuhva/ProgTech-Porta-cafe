@@ -42,4 +42,16 @@ public final class MessageDialog {
             log.log(Level.WARN, "Nem sikerült megrendelni a terméket!");
         }
     }
+
+    public static void showEmptyCart(String message) {
+        try {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setHeaderText("Kosara üres!");
+            alert.setContentText(message);
+            alert.showAndWait();
+        }
+        catch(ExceptionInInitializerError ex) {
+            log.log(Level.WARN, "Nem sikerült megrendelni a terméket!");
+        }
+    }
 }

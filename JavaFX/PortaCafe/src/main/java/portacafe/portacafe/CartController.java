@@ -6,6 +6,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import portacafe.core.coffees.abstracts.AbstractCoffee;
@@ -34,7 +35,7 @@ import java.util.ResourceBundle;
 public class CartController implements Initializable {
 
     @FXML
-    private Button backButton;
+    public Button backButton, orderButton;
     @FXML
     public TableView<AbstractCoffee> coffeeTable;
     @FXML
@@ -42,15 +43,16 @@ public class CartController implements Initializable {
     @FXML
     public TableColumn<AbstractCoffee, String> nameColumn;
 
-
     private MainWindowController mainWindowController;
 
     public CartController(MainWindowController mainWindowController) {
         this.mainWindowController = mainWindowController;
     }
 
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        coffeeTable.setPlaceholder(new Label("A kosár üres."));
         backButton.setOnAction(this::closeCart);
         mainWindowController.viewCartButton.setDisable(true);
         initTableColumns();
@@ -91,6 +93,7 @@ public class CartController implements Initializable {
         }
     }
 
+
     private void initTableColumns() {
         idColumn.setCellValueFactory(new PropertyValueFactory<>("orderedCoffeeID"));
         nameColumn.setCellValueFactory(new PropertyValueFactory<>("coffeeName"));
@@ -114,13 +117,21 @@ public class CartController implements Initializable {
     }
     public void makeOrder(ActionEvent actionEvent) throws SQLException {
         Connection c = SqliteConnection.getConnection();
-        try{
+        if (isCartEmpty()) {
+            MessageDialog.showEmptyCart("Előbb adjon hozzá egy kávét a kosarához!");
+            return;
+        }
+        try {
             new MakeMyOrderCommand().execute(c);
             this.closeCart(actionEvent);
             MessageDialog.showMessage("Kérem várjon, amíg a rendelése elkészül!");
-        } catch (CartIsEmptyException ex){
+        } catch (CartIsEmptyException ex) {
             throw new CartIsEmptyException();
         }
         loadData();
+    }
+
+    private boolean isCartEmpty() {
+        return coffeeTable.getItems().isEmpty();
     }
 }
