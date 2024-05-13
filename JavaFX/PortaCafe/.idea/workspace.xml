@@ -7,9 +7,11 @@
     <list default="true" id="b6f86172-6d04-4b50-a744-d59a8c545334" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coffeeDB.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/coffeeDB.sqlite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/portacafe/core/kiosk/Kiosk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/portacafe/core/kiosk/Kiosk.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/portacafe/database/SqliteConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/portacafe/database/SqliteConnection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/portacafe/dialogs/MessageDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/portacafe/dialogs/MessageDialog.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/portacafe/portacafe/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/portacafe/portacafe/CartController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/portacafe/portacafe/MainWindowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/portacafe/portacafe/MainWindowController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/portacafe/portacafe/CoffeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/portacafe/portacafe/CoffeeController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +92,7 @@
       <workItem from="1715415445566" duration="2048000" />
       <workItem from="1715530704420" duration="18000" />
       <workItem from="1715530745573" duration="3114000" />
-      <workItem from="1715550222260" duration="9496000" />
+      <workItem from="1715550222260" duration="12881000" />
     </task>
     <servers />
   </component>

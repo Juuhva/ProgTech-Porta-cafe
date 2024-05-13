@@ -14,8 +14,10 @@ import portacafe.core.factories.AbstractCoffeeFactory;
 import portacafe.core.factories.AbstractToppingFactory;
 import portacafe.core.factories.coffees.AllInOneCoffeeFactory;
 import portacafe.core.factories.toppings.ToppingFactory;
+import portacafe.core.kiosk.Kiosk;
 import portacafe.database.SqliteConnection;
 import portacafe.database.commands.ClearCartCommand;
+import portacafe.database.commands.FinishOrderCommand;
 import portacafe.database.commands.ListCartContentCommand;
 import javafx.scene.control.TableColumn;
 import portacafe.database.commands.MakeMyOrderCommand;
@@ -114,6 +116,7 @@ public class CartController implements Initializable {
         Connection c = SqliteConnection.getConnection();
         new ClearCartCommand().execute(c);
         loadData();
+        c.close();
     }
     public void makeOrder(ActionEvent actionEvent) throws SQLException {
         Connection c = SqliteConnection.getConnection();
@@ -122,10 +125,14 @@ public class CartController implements Initializable {
             return;
         }
         try {
-            new MakeMyOrderCommand().execute(c);
             this.closeCart(actionEvent);
             MessageDialog.showMessage("Kérem várjon, amíg a rendelése elkészül!");
-        } catch (CartIsEmptyException ex) {
+            Kiosk kiosk = new Kiosk();
+            kiosk.brewAllCoffeesInOrder();
+            new FinishOrderCommand(kiosk.getLastOrderID()).execute(c);
+            MessageDialog.showCompletedOrder("Rendelését átveheti a kasszánál!");
+            c.close();
+        } catch (CartIsEmptyException | InterruptedException ex) {
             throw new CartIsEmptyException();
         }
         loadData();

@@ -26,7 +26,13 @@ public class CoffeeController {
 
     @FXML public void initialize() {
         backButton.setOnAction(event -> cancelSelection(event));
-        addToCartButton.setOnAction(event -> addToCart(event));
+        addToCartButton.setOnAction(event -> {
+            try {
+                addToCart(event);
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+        });
         coffeSelectionTitle.setText(buttonText);
     }
     ArrayList<Integer> unsortedToppings = new ArrayList<>();
@@ -124,11 +130,12 @@ public class CoffeeController {
         stage.close();
     }
 
-    public void addToCart(ActionEvent actionEvent) {
+    public void addToCart(ActionEvent actionEvent) throws SQLException {
         int[] intToppingsArray = unsortedToppings.stream().mapToInt(Integer::intValue).toArray();
         new AddToCartCommand(mainWindowController.coffeeID, intToppingsArray).execute(c);
         this.cancelSelection(actionEvent);
         MessageDialog.showCart("A termék sikeresen hozzáadva a kosárhoz!");
+        c.close();
     }
 
 }
