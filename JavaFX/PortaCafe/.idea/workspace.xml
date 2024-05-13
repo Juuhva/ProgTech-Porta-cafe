@@ -5,13 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b6f86172-6d04-4b50-a744-d59a8c545334" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/portacafe/core/factories/coffees/DarkCoffeeFactoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/portacafe/core/factories/coffees/LightCoffeeFactoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/portacafe/core/factories/coffees/MediumCoffeeFactoryTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coffeeDB.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/coffeeDB.sqlite" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/portacafe/core/kiosk/Kiosk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/portacafe/core/kiosk/Kiosk.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/portacafe/database/SqliteConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/portacafe/database/SqliteConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/portacafe/dialogs/MessageDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/portacafe/dialogs/MessageDialog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/portacafe/portacafe/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/portacafe/portacafe/CartController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/portacafe/portacafe/CoffeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/portacafe/portacafe/CoffeeController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,29 +42,45 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.MainWindowController.executor&quot;: &quot;Run&quot;,
-    &quot;Application.WelcomeScreen.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;24-rendelsek-s-kosr-gui&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/panty/OneDrive/Dokumentumok/GitHub/ProgkornyBeadando&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.HelloApplication.executor": "Run",
+    "Application.MainWindowController.executor": "Run",
+    "Application.WelcomeScreen.executor": "Run",
+    "JUnit.All in PortaCafe.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "4-tesztels---junit-teszt-pntya-barnabs",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/panty/OneDrive/Dokumentumok/GitHub/ProgkornyBeadando",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;sqlite&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "sqlite"
     ]
   }
-}</component>
+}]]></component>
+  <component name="RunManager">
+    <configuration name="All in PortaCafe" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PortaCafe" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.All in PortaCafe" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -93,6 +106,7 @@
       <workItem from="1715530704420" duration="18000" />
       <workItem from="1715530745573" duration="3114000" />
       <workItem from="1715550222260" duration="12881000" />
+      <workItem from="1715564944877" duration="20000" />
     </task>
     <servers />
   </component>
