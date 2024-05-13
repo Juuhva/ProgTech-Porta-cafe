@@ -10,9 +10,15 @@ import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import portacafe.core.coffees.roasts.dark.CaffeVeronaCoffee;
+import portacafe.core.coffees.roasts.dark.EspressoRoastCoffee;
+import portacafe.core.coffees.roasts.dark.SumatraCoffee;
+import portacafe.core.coffees.roasts.light.BlondeEspressoCoffee;
+import portacafe.core.coffees.roasts.medium.*;
 
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class MainWindowController  {
 
@@ -32,10 +38,14 @@ public class MainWindowController  {
     Button firstDarkCoffee, secondDarkCoffee, thirdDarkCoffee;
     @FXML
     Pane lightPane, mediumPane, darkPane;
+    @FXML
+    Button viewCartButton;
 
     @FXML
     public void initialize() {
     }
+
+    int coffeeID;
 
     public void showLightCoffees(javafx.event.ActionEvent actionEvent) {
         lightCoffeeButton.setDisable(true);
@@ -44,6 +54,7 @@ public class MainWindowController  {
         lightPane.setVisible(true);
         mediumPane.setVisible(false);
         darkPane.setVisible(false);
+        getButtonIDs(lightPane);
     }
 
     public void showMediumCoffees(javafx.event.ActionEvent actionEvent) {
@@ -53,6 +64,7 @@ public class MainWindowController  {
         lightPane.setVisible(false);
         mediumPane.setVisible(true);
         darkPane.setVisible(false);
+        getButtonIDs(mediumPane);
     }
 
     public void showDarkCoffees(ActionEvent actionEvent) {
@@ -62,6 +74,7 @@ public class MainWindowController  {
         darkPane.setVisible(true);
         lightPane.setVisible(false);
         mediumPane.setVisible(false);
+        getButtonIDs(darkPane);
     }
 
 
@@ -83,6 +96,54 @@ public class MainWindowController  {
         thirdDarkCoffee.setDisable(isDisabled);
     }
 
+    public void disableRoastButtons(boolean isDisabled){
+    darkCoffeeButton.setDisable(isDisabled);
+    mediumCoffeeButton.setDisable(isDisabled);
+    lightCoffeeButton.setDisable(isDisabled);
+    }
+
+    public void getButtonIDs(javafx.scene.layout.Pane pane) {
+        for (javafx.scene.Node node : pane.getChildren()) {
+            if (node instanceof Button) {
+                Button button = (Button) node;
+                button.setOnMouseClicked(event -> {
+                    String buttonID = button.getId();
+                    switch (buttonID) {
+                        case "lightCoffeeButton":
+                            coffeeID = BlondeEspressoCoffee.ID;
+                            break;
+                        case "firstMediumCoffee":
+                            coffeeID = ColombiaCoffee.ID;
+                            break;
+                        case "secondMediumCoffee":
+                            coffeeID = EthiopiaCoffee.ID;
+                            break;
+                        case "thirdMediumCoffee":
+                            coffeeID = GuatemalaAntiguaCoffee.ID;
+                            break;
+                        case "fourthMediumCoffee":
+                            coffeeID = HouseBlendCoffee.ID;
+                            break;
+                        case "fifthMediumCoffee":
+                            coffeeID = KenyaCoffee.ID;
+                            break;
+                        case "sixthMediumCoffee":
+                            coffeeID = PikePlaceRoastCoffee.ID;
+                            break;
+                        case "firstDarkCoffee":
+                            coffeeID = CaffeVeronaCoffee.ID;
+                            break;
+                        case "secondDarkCoffee":
+                            coffeeID = SumatraCoffee.ID;
+                            break;
+                        case "thirdDarkCoffee":
+                            coffeeID = EspressoRoastCoffee.ID;
+                            break;
+                    }
+                });
+            }
+        }
+    }
 
 
     public void showCoffee(ActionEvent actionEvent) {
@@ -90,7 +151,7 @@ public class MainWindowController  {
             Button clickedButton = (Button) actionEvent.getSource();
             String buttonText = clickedButton.getText();
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("views/coffee.fxml"));
-            fxmlLoader.setController(new CoffeeController(this, buttonText));
+            fxmlLoader.setController(new CoffeeController(this, buttonText, coffeeID)); // Use updated coffeeID
             Parent root = fxmlLoader.load();
             Stage stage = new Stage();
             Scene scene = new Scene(root);
@@ -98,7 +159,30 @@ public class MainWindowController  {
             scene.setFill(Color.TRANSPARENT);
             stage.setScene(scene);
             stage.show();
-            stage.setAlwaysOnTop(true);
+            disableLightButtons(true);
+            disableMediumButtons(true);
+            disableDarkButtons(true);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+
+    public void showCartItems(ActionEvent actionEvent) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("views/cart.fxml"));
+            CartController cartController = new CartController(this);
+            fxmlLoader.setController(cartController);
+            Parent root = fxmlLoader.load();
+            Stage stage = new Stage();
+            Scene scene = new Scene(root);
+            stage.initStyle(StageStyle.TRANSPARENT);
+            scene.setFill(Color.TRANSPARENT);
+            stage.setScene(scene);
+            stage.show();
+            disableRoastButtons(true);
             disableLightButtons(true);
             disableMediumButtons(true);
             disableDarkButtons(true);
@@ -106,6 +190,4 @@ public class MainWindowController  {
             e.printStackTrace();
         }
     }
-
-
 }

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="900.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TableView fx:id="coffeeTable" prefHeight="400.0" prefWidth="710.0">
+        <columns>
+            <TableColumn fx:id="idColumn" prefWidth="25.600005745887756" style="-fx-alignment: Center;" text="id" />
+            <TableColumn fx:id="nameColumn" prefWidth="523.2000370025635" style="-fx-alignment: Center;" text="Kávé neve" />
+            <TableColumn fx:id="priceColumn" prefWidth="159.19998779296873" style="-fx-alignment: Center;" text="Kávé ára" />
+        </columns>
+      </TableView>
+      <ImageView fitHeight="400.0" fitWidth="189.0" layoutX="710.0" pickOnBounds="true">
+         <image>
+            <Image url="@../Imgs/cart.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="orderButton" layoutX="724.0" layoutY="103.0" mnemonicParsing="false" onAction="#makeOrder" prefHeight="43.0" prefWidth="161.0" style="-fx-background-color: LightGrey; -fx-background-radius: 20;" text="Megrendelés" textFill="#cf8b02">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button fx:id="clearCartButton" layoutX="721.0" layoutY="24.0" mnemonicParsing="false" onAction="#clearCart" prefHeight="43.0" prefWidth="167.0" style="-fx-background-color: LightGrey; -fx-background-radius: 20;" text="Kosár törlése" textFill="#cf8b02">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button fx:id="backButton" layoutX="710.0" layoutY="155.0" mnemonicParsing="false" onAction="#closeCart" prefHeight="51.0" prefWidth="140.0" style="-fx-background-color: Transparent;" text="&lt;vissza" textFill="#ffae00">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+   </children>
+</AnchorPane>

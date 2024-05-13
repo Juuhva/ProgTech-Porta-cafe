@@ -22,16 +22,16 @@ import java.util.List;
 
 public class Kiosk {
     private CoffeeMachine[] machines = new CoffeeMachine[] {
-            new CoffeeMachine(new LightCoffeeFactory(), new ToppingFactory(), 100),
-            new CoffeeMachine(new MediumCoffeeFactory(), new ToppingFactory(), 150),
-            new CoffeeMachine(new DarkCoffeeFactory(), new ToppingFactory(), 200),
             new CoffeeMachine(new LightCoffeeFactory(), new ToppingFactory(), 200),
-            new CoffeeMachine(new DarkCoffeeFactory(), new ToppingFactory(), 300),
-            new CoffeeMachine(new AllInOneCoffeeFactory(), new ToppingFactory(), 450)
+            new CoffeeMachine(new MediumCoffeeFactory(), new ToppingFactory(), 300),
+            new CoffeeMachine(new DarkCoffeeFactory(), new ToppingFactory(), 400),
+            new CoffeeMachine(new LightCoffeeFactory(), new ToppingFactory(), 400),
+            new CoffeeMachine(new DarkCoffeeFactory(), new ToppingFactory(), 600),
+            new CoffeeMachine(new AllInOneCoffeeFactory(), new ToppingFactory(), 900)
     };
 
     private final List<AbstractCoffee> madeCoffees = new ArrayList<>();
-    public int orderID = -1;
+    private int orderID = -1;
 
     public void brewAllCoffeesInOrder() throws InterruptedException {
         Connection connection;

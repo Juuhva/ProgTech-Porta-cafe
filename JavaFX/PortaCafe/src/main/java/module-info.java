@@ -10,5 +10,10 @@ module portacafe.portacafe {
 
 
     opens portacafe.portacafe to javafx.fxml;
+    opens portacafe.core.coffees.abstracts to javafx.base;
+    opens portacafe.core.coffees.roasts.medium to javafx.base;
+    opens portacafe.core.coffees to javafx.base;
+    opens portacafe.core.coffees.roasts.light to javafx.base;
+    opens portacafe.core.coffees.roasts.dark to javafx.base;
     exports portacafe.portacafe;
 }
