@@ -30,15 +30,14 @@ A projektet Java programnyelven fejlesztjük, bizonyos tervezési minták felhas
 
 A fejlesztés során használt eszközök:
 - Visul Studio Code
-- IntelliJ Idea Community Edition
-- Xampp
-- Mysql
+- IntelliJ Idea Ultimate Edition
+- Gluon SceneBuilder
 
 ## 6. Architekturális terv
 
 ### Adatbázis rendszer
 
-A szoftver MySQL-alapú adatbázis szervert használ.
+A szoftver SQLite adatbázis szervert használ.
 
 ### A program elérése, kezelése
 
@@ -50,7 +49,7 @@ A programnak el kell tudni érnie az adatbázis-szervert, továbbá rendelkeznie
 
 ## 8. Implementációs terv
 
-A szoftver fejlesztéséhez Java programozási nyelvet használunk, a frontend kialakítását Swing-gel, az adatbázis kialakítását pedig MySQL-rendszerrel oldjuk meg. Ügyelni kell a logolásra, illetve az OCP és SRP szabályainak betartására. Terv szerint a **dekorátor**, **stratégia** és **sablonmetódus** tervezési mintákat használjuk fel.
+A szoftver fejlesztéséhez Java programozási nyelvet használunk, a frontend kialakítását JavafX segítségével végezzük, az adatbázis kialakítását pedig SQLite rendszerrel oldjuk meg. Ügyelni kell a logolásra, illetve az OCP és SRP szabályainak betartására. Terv szerint a **dekorátor**, **command**, és **absztraktgyár** tervezési mintákat használjuk fel.
 
 ## 9. Tesztterv
 
