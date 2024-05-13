@@ -35,7 +35,6 @@ public class StartController {
                 stage.initStyle(StageStyle.TRANSPARENT);
                 scene.setFill(Color.TRANSPARENT);
                 stage.setScene(scene);
-                stage.setAlwaysOnTop(true);
                 stage.show();
             } catch (IOException e) {
                 e.printStackTrace();

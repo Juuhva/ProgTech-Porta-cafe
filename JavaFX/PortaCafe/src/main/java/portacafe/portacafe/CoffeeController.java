@@ -8,6 +8,7 @@ import javafx.stage.Stage;
 import portacafe.database.SqliteConnection;
 import portacafe.database.commands.AddToCartCommand;
 import portacafe.database.commands.ListCartContentCommand;
+import portacafe.dialogs.MessageDialog;
 
 
 import java.sql.Connection;
@@ -126,6 +127,8 @@ public class CoffeeController {
     public void addToCart(ActionEvent actionEvent) {
         int[] intToppingsArray = unsortedToppings.stream().mapToInt(Integer::intValue).toArray();
         new AddToCartCommand(mainWindowController.coffeeID, intToppingsArray).execute(c);
+        this.cancelSelection(actionEvent);
+        MessageDialog.showCart("A termék sikeresen hozzáadva a kosárhoz!");
     }
 
 }

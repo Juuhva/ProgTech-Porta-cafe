@@ -159,7 +159,6 @@ public class MainWindowController  {
             scene.setFill(Color.TRANSPARENT);
             stage.setScene(scene);
             stage.show();
-            stage.setAlwaysOnTop(true);
             disableLightButtons(true);
             disableMediumButtons(true);
             disableDarkButtons(true);

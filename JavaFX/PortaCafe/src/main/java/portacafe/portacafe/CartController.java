@@ -20,6 +20,8 @@ import javafx.scene.control.TableColumn;
 import portacafe.database.commands.MakeMyOrderCommand;
 import portacafe.database.datastructures.OrderedCoffeeEntry;
 import javafx.scene.control.TableView;
+import portacafe.database.exceptions.CartIsEmptyException;
+import portacafe.dialogs.MessageDialog;
 
 import java.net.URL;
 import java.sql.Connection;
@@ -112,7 +114,13 @@ public class CartController implements Initializable {
     }
     public void makeOrder(ActionEvent actionEvent) throws SQLException {
         Connection c = SqliteConnection.getConnection();
-        new MakeMyOrderCommand().execute(c);
+        try{
+            new MakeMyOrderCommand().execute(c);
+            this.closeCart(actionEvent);
+            MessageDialog.showMessage("Kérem várjon, amíg a rendelése elkészül!");
+        } catch (CartIsEmptyException ex){
+            throw new CartIsEmptyException();
+        }
         loadData();
     }
 }
