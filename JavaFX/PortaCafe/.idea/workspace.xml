@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b6f86172-6d04-4b50-a744-d59a8c545334" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/portacafe/core/factories/coffees/DarkCoffeeFactoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/portacafe/core/factories/coffees/LightCoffeeFactoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/portacafe/core/factories/coffees/MediumCoffeeFactoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coffeeDB.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/coffeeDB.sqlite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/portacafe/portacafe/views/cart.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/portacafe/portacafe/views/cart.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/portacafe/portacafe/views/coffee.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/portacafe/portacafe/views/coffee.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/portacafe/portacafe/views/mainWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/portacafe/portacafe/views/mainWindow.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +50,7 @@
     "JUnit.All in PortaCafe.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "4-tesztels---junit-teszt-pntya-barnabs",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/panty/OneDrive/Dokumentumok/GitHub/ProgkornyBeadando",
     "node.js.detected.package.eslint": "true",
@@ -107,6 +107,7 @@
       <workItem from="1715530745573" duration="3114000" />
       <workItem from="1715550222260" duration="12881000" />
       <workItem from="1715564944877" duration="20000" />
+      <workItem from="1715577162646" duration="50000" />
     </task>
     <servers />
   </component>

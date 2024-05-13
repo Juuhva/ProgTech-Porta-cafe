@@ -71,7 +71,7 @@
             <DropShadow />
          </effect>
       </Label>
-      <Label fx:id="totalPrice" layoutX="14.0" layoutY="325.0" prefHeight="64.0" prefWidth="562.0" style="visibility: false;" text="Ár:" textFill="#ffae00">
+      <Label fx:id="coffeePrice" layoutX="14.0" layoutY="325.0" prefHeight="64.0" prefWidth="562.0" style="visibility: false;" text="Ár:" textFill="#ffae00">
          <font>
             <Font size="51.0" />
          </font>
@@ -183,5 +183,37 @@
             <DropShadow />
          </effect>
       </Button>
+      <Label layoutX="172.0" layoutY="164.0" text="(+5 Ft)" textFill="#ffae00">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Label layoutX="147.0" layoutY="209.0" text="(+20 Ft)" textFill="#ffae00">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Label layoutX="176.0" layoutY="252.0" text="(+40 Ft)" textFill="#ffae00">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Label layoutX="212.0" layoutY="294.0" text="(+100 Ft)" textFill="#ffae00">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
    </children>
 </AnchorPane>

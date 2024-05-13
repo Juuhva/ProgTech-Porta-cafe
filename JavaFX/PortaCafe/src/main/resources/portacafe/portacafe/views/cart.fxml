@@ -15,7 +15,7 @@
         <columns>
             <TableColumn fx:id="idColumn" prefWidth="25.600005745887756" style="-fx-alignment: Center;" text="id" />
             <TableColumn fx:id="nameColumn" prefWidth="523.2000370025635" style="-fx-alignment: Center;" text="Kávé neve" />
-            <TableColumn fx:id="priceColumn" prefWidth="159.19998779296873" style="-fx-alignment: Center;" text="Kávé ára" />
+            <TableColumn fx:id="priceColumn" prefWidth="159.19998779296873" style="-fx-alignment: Center;" text="Kávé ára(Ft)" />
         </columns>
       </TableView>
       <ImageView fitHeight="400.0" fitWidth="189.0" layoutX="710.0" pickOnBounds="true">

@@ -83,6 +83,36 @@
                         <Font name="System Italic" size="18.0" />
                      </font>
                   </Label>
+                  <Label layoutX="353.0" layoutY="167.0" text="1190  Ft">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="813.0" layoutY="167.0" text="990  Ft">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="353.0" layoutY="379.0" text="1290  Ft">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="806.0" layoutY="371.0" text="1190  Ft">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="339.0" layoutY="570.0" text="1090  Ft">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="813.0" layoutY="570.0" text="1390  Ft">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
                </children>
             </Pane>
             <Pane fx:id="darkPane" layoutX="359.0" prefHeight="720.0" prefWidth="925.0" style="visibility: false;">
@@ -109,7 +139,7 @@
                      </effect>
                   </Button>
                   <Label layoutX="41.0" layoutY="195.0" prefHeight="108.0" prefWidth="412.0" text="A Caffè Verona® egy csábító keverék latin-amerikai és indonéziai kávébabokból, enyhe Italian Roast érintéssel, mély, lélekemelő édességgel. Mivel ez az élvezetes kombináció kiválóan illik a csokoládéhoz, Valentin-napi kedvenc lett - és az a kávé, amelyet leginkább a romantikához kötünk. Bella, Bella!" textAlignment="JUSTIFY" wrapText="true" />
-                  <Button fx:id="secondDarkCoffee" layoutX="481.0" layoutY="131.0" mnemonicParsing="false" onAction="#showCoffee" prefHeight="59.0" prefWidth="412.0" style="-fx-background-color: Transparent;" text="Sumatra | földes és gyógynövényes" wrapText="true">
+                  <Button fx:id="secondDarkCoffee" layoutX="478.0" layoutY="119.0" mnemonicParsing="false" onAction="#showCoffee" prefHeight="59.0" prefWidth="412.0" style="-fx-background-color: Transparent;" text="Sumatra | földes és gyógynövényes" wrapText="true">
                      <font>
                         <Font name="Comic Sans MS Bold Italic" size="22.0" />
                      </font>
@@ -127,6 +157,21 @@
                      </effect>
                   </Button>
                   <Label fx:id="thirdCoffeeDesc1" layoutX="495.0" layoutY="204.0" prefHeight="88.0" prefWidth="406.0" text="Telt, vajasan testes kávé, szinte savasság nélkül, így az intenzitása és ízvilága szinte táncra perdül az ember nyelvén. Ne értsd félre, ez tényleg egy szürcsölhető kávé. A koncentrált gyógyfüves jellege és föld közeli aromája azonnal felismerhetővé teszi ezt a speciális kávét, amely azonnal nyomot hagy a szívünkben és a pólónkon." textAlignment="JUSTIFY" wrapText="true" />
+                  <Label layoutX="358.0" layoutY="370.0" text="1390  Ft">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="365.0" layoutY="161.0" text="1190  Ft">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="810.0" layoutY="167.0" text="1290  Ft">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
                </children>
             </Pane>
             <Pane fx:id="lightPane" layoutX="358.0" layoutY="-2.0" prefHeight="720.0" prefWidth="925.0" style="visibility: false;">
@@ -152,7 +197,12 @@
                         <Glow />
                      </effect>
                   </Button>
-                  <Label fx:id="firstCoffeeDesc" layoutX="40.0" layoutY="175.0" prefHeight="88.0" prefWidth="412.0" text="Hihetetlenül sima és finoman édes, krémes szájízt hagyva maga után. Ez a világosabb pörkölés egyedi ízt kölcsönöz eszpresszóinknak. Ezt az egyedülálló keveréket oly módon személyre szabtuk, hogy kiemelje az eszpresszó világosabb oldalát, hogy krémes testet és édes citrusos jegyeket kaphass." textAlignment="JUSTIFY" wrapText="true" />
+                  <Label fx:id="firstCoffeeDesc" layoutX="40.0" layoutY="186.0" prefHeight="88.0" prefWidth="412.0" text="Hihetetlenül sima és finoman édes, krémes szájízt hagyva maga után. Ez a világosabb pörkölés egyedi ízt kölcsönöz eszpresszóinknak. Ezt az egyedülálló keveréket oly módon személyre szabtuk, hogy kiemelje az eszpresszó világosabb oldalát, hogy krémes testet és édes citrusos jegyeket kaphass." textAlignment="JUSTIFY" wrapText="true" />
+                  <Label layoutX="363.0" layoutY="162.0" text="1290  Ft">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
                </children>
             </Pane>
             <ImageView fitHeight="720.0" fitWidth="362.0" layoutX="-5.0" pickOnBounds="true">
