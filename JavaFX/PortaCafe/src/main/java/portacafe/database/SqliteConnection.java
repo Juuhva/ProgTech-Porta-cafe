@@ -10,6 +10,7 @@ import java.util.Properties;
 
 public final class SqliteConnection {
     private static final String CONNECTION_STRING = "jdbc:sqlite:coffeeDB.sqlite";
+    private static final String DEBUG_CONNECTION_STRING = "jdbc:sqlite:coffeeDB_debug.sqlite";
 
     private static final Logger log = LogManager.getLogger(SqliteConnection.class);
     private static Connection connection = null;
@@ -30,6 +31,14 @@ public final class SqliteConnection {
         }
 
         return connection;
+    }
+    public static Connection getDebugConnection() throws SQLException {
+        Connection conn = DriverManager.getConnection(
+                DEBUG_CONNECTION_STRING,
+                getConfigProperties());
+        conn.setAutoCommit(false);
+
+        return conn;
     }
     private static Properties getConfigProperties() {
         SQLiteConfig config = new SQLiteConfig();

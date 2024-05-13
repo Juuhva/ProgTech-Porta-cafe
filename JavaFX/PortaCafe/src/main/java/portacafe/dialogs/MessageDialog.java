@@ -14,7 +14,7 @@ public final class MessageDialog {
             alert.setHeaderText("Hiba!");
             alert.setContentText(message);
         }
-        catch(ExceptionInInitializerError ex) {
+        catch(Throwable ex) {
             log.log(Level.WARN, "Nem sikerült dialógust létrehozni; JavaFX nincs inicializálva.");
         }
     }
